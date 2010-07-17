@@ -3,6 +3,7 @@
 
 import random
 import os
+import time
 
 class Square:
     """This is the abstraction of one Square"""
@@ -12,7 +13,7 @@ class Square:
         self.attrib = attrib
         self.rep = '\033[4%sm%s \033[0m' % (attrib, attrib)
         self.have_vecinos = True
-
+        self.is_child = False
 class Screen:
     """The Screen Array of the game"""
     def __init__(self, x_size, y_size, tokens):
@@ -24,6 +25,7 @@ class Screen:
         self.populate()
         self.childs.append(self.squares[0][0])
         self.childs[0].rep = '# '
+        self.childs[0].is_child = True
         self.attrib = self.childs[0].attrib
     def get_near_to(self, child):
         vecinos = []
@@ -35,7 +37,7 @@ class Screen:
             vecinos.append(self.get_square(child.x +1, child.y))
         if child.y + 1 < self.y_size:
             vecinos.append(self.get_square(child.x, child.y + 1))
-        vecinos = [vecino for vecino in vecinos if(not vecino in self.childs)]
+        vecinos = [vecino for vecino in vecinos if(not vecino.is_child)]
         if not vecinos:
             child.have_vecinos = False
         return vecinos
@@ -62,6 +64,7 @@ class Screen:
                 if (vecino.attrib == self.attrib):
                     vecino.rep = child.rep
                     self.childs.append(vecino)
+                    vecino.is_child = True
 
     def __repr__(self):
         output = ''
@@ -79,14 +82,16 @@ class Screen:
 
 if __name__ == '__main__':
     os.system('clear')
-    tokens = [str(d) for d in range(1, 8)]
-    screen = Screen(20, 20, tokens)
+    tokens = [str(d) for d in range(1, 4)]
+    screen = Screen(20, 10, tokens)
     print screen
     screen.update(screen.childs[0].attrib) #dirty Hack
     limit = screen.x_size + screen.y_size 
     win = False
     for b in xrange(1, limit + 1):
+       # time.sleep(0.5)   
         a = raw_input('_#: ')
+       # a = random.choice(tokens)
         screen.update(a)
         os.system('clear')
         print screen
