@@ -10,7 +10,7 @@ class Square:
         self.x = x
         self.y = y
         self.attrib = attrib
-        self.rep = attrib
+        self.rep = '\033[4%sm%s \033[0m' % (attrib, attrib)
 
 class Screen:
     """The Screen Array of the game"""
@@ -22,7 +22,7 @@ class Screen:
         self.squares = []
         self.populate()
         self.childs.append(self.squares[0][0])
-        self.childs[0].rep = '#'
+        self.childs[0].rep = '# '
 
     def get_near_to(self, child):
         vecinos = []
@@ -58,13 +58,13 @@ class Screen:
         if vecinos:
             for vecino in vecinos:
                 if (vecino.attrib == child.attrib):
-                    vecino.rep = '#'
+                    vecino.rep = child.rep
                     self.childs.append(vecino)
 
     def __repr__(self):
         output = ''
         for row in self.squares:
-            output += ''.join(['%s ' % str(a.rep) for a in row])
+            output += ''.join(['%s' % str(a.rep) for a in row])
             output += '\n'
         return output
     
@@ -76,13 +76,14 @@ class Screen:
 
 if __name__ == '__main__':
     os.system('clear')
-    screen = Screen(10, 10, ['1', '2', '3', '4', '5'])
+    tokens = [str(d) for d in range(1, 6)]
+    screen = Screen(10, 10, tokens)
     print screen
     screen.update(screen.childs[0].attrib) #dirty Hack
     limit = 18 
     win = False
-    for b in xrange(1, limit):
-        a = raw_input('_ ')
+    for b in xrange(1, limit + 1):
+        a = raw_input('_#: ')
         screen.update(a)
         os.system('clear')
         print screen
