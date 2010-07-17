@@ -11,6 +11,7 @@ class Square:
         self.y = y
         self.attrib = attrib
         self.rep = '\033[4%sm%s \033[0m' % (attrib, attrib)
+        self.have_vecinos = True
 
 class Screen:
     """The Screen Array of the game"""
@@ -23,7 +24,7 @@ class Screen:
         self.populate()
         self.childs.append(self.squares[0][0])
         self.childs[0].rep = '# '
-
+        self.attrib = self.childs[0].attrib
     def get_near_to(self, child):
         vecinos = []
         if child.x - 1 >= 0:
@@ -34,9 +35,10 @@ class Screen:
             vecinos.append(self.get_square(child.x +1, child.y))
         if child.y + 1 < self.y_size:
             vecinos.append(self.get_square(child.x, child.y + 1))
-        
-        return [vecino for vecino in vecinos if(not vecino in self.childs)]
-
+        vecinos = [vecino for vecino in vecinos if(not vecino in self.childs)]
+        if not vecinos:
+            child.have_vecinos = False
+        return vecinos
 
     def get_square(self, x, y):
         return self.squares[y][x]
@@ -57,7 +59,7 @@ class Screen:
         vecinos = self.get_near_to(child)
         if vecinos:
             for vecino in vecinos:
-                if (vecino.attrib == child.attrib):
+                if (vecino.attrib == self.attrib):
                     vecino.rep = child.rep
                     self.childs.append(vecino)
 
@@ -69,18 +71,19 @@ class Screen:
         return output
     
     def update(self, attrib):
+        self.attrib = attrib[0]
         for child in self.childs:
-            child.attrib = attrib[0]
-            self.check_arround(child)
+            if child.have_vecinos:
+                self.check_arround(child)
             
 
 if __name__ == '__main__':
     os.system('clear')
-    tokens = [str(d) for d in range(1, 6)]
-    screen = Screen(10, 10, tokens)
+    tokens = [str(d) for d in range(1, 8)]
+    screen = Screen(20, 20, tokens)
     print screen
     screen.update(screen.childs[0].attrib) #dirty Hack
-    limit = 18 
+    limit = screen.x_size + screen.y_size 
     win = False
     for b in xrange(1, limit + 1):
         a = raw_input('_#: ')
