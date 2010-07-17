@@ -1,3 +1,6 @@
+#! /usr/bin/python
+#!-*-coding: utf8-*-
+
 import random
 import os
 
@@ -72,6 +75,7 @@ class Screen:
             
 
 if __name__ == '__main__':
+    os.system('clear')
     screen = Screen(10, 10, ['1', '2', '3', '4', '5'])
     print screen
     screen.update(screen.childs[0].attrib) #dirty Hack
