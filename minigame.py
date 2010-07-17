@@ -3,11 +3,10 @@ import os
 
 class Square:
     """This is the abstraction of one Square"""
-    def __init__(self, x, y, attrib, root):
+    def __init__(self, x, y, attrib):
         self.x = x
         self.y = y
         self.attrib = attrib
-        self.root = root
         self.rep = attrib
 
 class Screen:
@@ -46,7 +45,7 @@ class Screen:
     def random_square(self, x, y):
         
         attrib = random.choice(self.tokens)
-        square = Square(x, y, attrib, self)
+        square = Square(x, y, attrib)
         
         return square
     
