@@ -4,6 +4,7 @@
 import random
 import os
 import time
+import copy
 
 class Square:
     """This is the abstraction of one Square"""
@@ -78,20 +79,49 @@ class Screen:
         for child in self.childs:
             if child.have_vecinos:
                 self.check_arround(child)
-            
 
+class Solver(Screen):
+    """Toma un Puzzle y lo resuelve de manera optima"""
+    def __init__(self, puzzle):
+        self.squares = puzzle.squares
+        self.tokens = puzzle.tokens
+        self.childs = []
+        self.x_size = puzzle.x_size
+        self.y_size = puzzle.y_size
+        self.attrib = puzzle.attrib
+    
+    def solve(self):
+        """Resuelvo un puzzle, para saber cuantos movimientos son necesarios"""
+        for a in self.tokens:
+            pass
+    
+    def check_move(token):
+        """Chequea cuantos cuadraditos agrega una eleccion de token"""
+        hijos = copy.copy(self.childs)
+        
+
+    def my_check_arround(self, child, childlist):
+        """We check the attrib of the near squares"""
+        vecinos = self.get_near_to(child)
+        if vecinos:
+            for vecino in vecinos:
+                if (vecino.attrib == self.attrib):
+                    vecino.rep = child.rep
+                    childlist.append(vecino)
+                    vecino.is_child = True
+    
 if __name__ == '__main__':
     os.system('clear')
-    tokens = [str(d) for d in range(1, 4)]
-    screen = Screen(20, 10, tokens)
+    tokens = [str(d) for d in xrange(1, 5)]
+    screen = Screen(20, 20, tokens)
     print screen
     screen.update(screen.childs[0].attrib) #dirty Hack
     limit = screen.x_size + screen.y_size 
     win = False
     for b in xrange(1, limit + 1):
-       # time.sleep(0.5)   
+        time.sleep(0.5)   
         a = raw_input('_#: ')
-       # a = random.choice(tokens)
+  #      a = random.choice(tokens)
         screen.update(a)
         os.system('clear')
         print screen
