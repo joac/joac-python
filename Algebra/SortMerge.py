@@ -6,15 +6,15 @@ def my_merge(lista1, lista2):
     lista1 = collections.deque(lista1)
     lista2 = collections.deque(lista2)
     merged = collections.deque()
-    while lista1 or lista2:
-        if (lista1 and lista2 ) and lista1[0] <= lista2[0]:
+    while lista1  and lista2:
+        if lista1[0] <= lista2[0]:
             merged.append(lista1.popleft())
-        elif (lista1 and lista2) and lista1[0] > lista2[0]:
+        elif lista1[0] > lista2[0]:
             merged.append(lista2.popleft())
-        elif lista1:
-            merged.append(lista1.popleft())
-        elif lista2:
-            merged.append(lista2.popleft())
+    if lista1:
+        merged.extend(lista1)
+    if lista2:
+        merged.extend(lista2)
     return list(merged)
 
 def my_sort(lista):
@@ -36,8 +36,9 @@ def run():
 
     print "ahora vemos si escala"
  
-    numero = 50000000
-    a = [random.randint(0, numero) for a in xrange(0, numero)]
+    numero = 5000000
+    a = [random.randint(0, 100) for a in xrange(0, numero)]
+    
     print "Ya tenemos los numeros"
     lista = [a[:numero/2] , a[numero/2:]]
     print "Lista bisectada"
