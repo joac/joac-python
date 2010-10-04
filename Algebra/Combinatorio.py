@@ -16,10 +16,11 @@ def Combinatorio(n, m):
 
 
 if __name__ == "__main__":
-    comb = Combinatorio(100, 50)
-    print "El combinatorio de n=100 m=50 es igual a: %d " % comb
+    comb = Combinatorio(24, 9)
+    comb = comb ** 2
+    print "El combinatorio de n=24 m=9 al cuadrado es igual a: %d " % comb
     print "Lo testeamos"
-    test = math.factorial(100)/(math.factorial(50)*math.factorial(100-50))
+    test = math.factorial(39)/(math.factorial(15)*2*math.factorial(9))
     print "Usando math.factorial da: %d" % test
     print "Son Iguales??", test == comb
-
+    print "la diferencia entre las dos es %d " % (test -comb)
