@@ -156,10 +156,33 @@ TODO
 OpenOPC
 =======
 
-Es un toolkit OPC para python.
+Es un toolkit OPC-DA para python.
 
 Que es OPC?
 -----------
+Es el acronimo para Object Linking and Embedding (OLE) for Process Control.
+Es un estandar que permite la comunicación en tiempo real entre aplicaciónes de distintos fabricantes.
+Los datos se obtienen a travez de *Servidores OPC*
+Hay varias versiones, pero la mas utilizada es OPC-DA (fuertemente atada a Window$, ya que utiliza DCOM)
+
+Ventajas
+--------
+* No tenemos que preocuparnos en la comunicación explicita con los dispositivos.
+* Es sencillo de utulizar.
+* Podemos acceder a muchos dispositivos con diversos protocolos, con una interfaz comun.
+* Es la unica forma (estable) que encontre para comunicarme con dispositivos Siemens de gama media/baja.
+* OpenOPC puede ser utilizado para acceder de forma remota a servidores OPC utilizando PyRO
+
+Desventajas
+-----------
+* Los Servidores suelen ser pagos (y bastante caros)
+* Necesitamos un equipo con windows
+
+Ejemplo
+-------
+TODO
+
+
 
 
 
