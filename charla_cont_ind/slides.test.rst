@@ -16,145 +16,26 @@
 Monitoreo y Control Industrial Usando Python
 =============================================
 
-.. image:: src/tiempos+modernos.jpg
-   :width: 50%
+.. class:: centered
+
+    PyCon Argentina 2010
+    Córdoba
+
 
 :Autor: Joaquín Sorianello <soriasoft@gmail.com>
 :Fecha: 16/10/2010
 :Licencia: |cc| |by| |sa| CC-by-sa-2.5
 
-De que se trata todo esto
-==========================
-Monitoreo
----------
-* Adquirir Datos
-* Procesarlos
-* Almacenarlos
-* Presentarlos
-
-Control
--------
-* Enviar consignas de control 
-* Establecer parámetros en los dispositivos
-
-.. image:: src/bus.jpg
-   :width: 50%
-   :align: center
-
-Lo mas importante
-=================
-
-* La seguridad física de las personas.
-* La seguridad de las instalaciones.
-* La continuidad de los Procesos.
-
-.. image:: src/cuidado.gif
-   :width: 50%
-   :align: center
-
-El concepto de SCADA
-====================
-
-SCADA es el acrónimo para Supervisory Control And Data Acquisition.
-(Adquisición de Datos, Supervisión y Control)
-
-Adquisición de Datos
---------------------
-Obtener datos del campo.
-
-Supervisión
------------
-Monitoreo de parámetros que permiten tomar decisiones (humanas o automáticas), sobre el proceso
-
-Control
--------
-Incio/parada de procesos, configuración de parámetros
-
-Algunos Módulos Útiles
-=======================================
-
-* PySerial
-* ModbusTk
-* OpenOpc
-
-.. image:: src/twido.jpg
-   :width: 50%
-   :align: center
-
-PySerial
-=====================================================
-:url: http://pyserial.sourceforge.net/
-
-Nos permite adquirir datos y controlar dispositivos utilizando un bus Serie RS-232 o RS-485 (entre otros)
-
-.. image:: src/rs-232.jpeg
-   :width: 30%
-   :align: center
-
-Dispositivos
-------------
-* Phimetros
-* Balanzas
-* Conductivimetros
-* Sensores ultrasónicos
-* Caudalimetros
-
-.. raw:: pdf
-   
-   PageBreak
-
-
-Ventajas
----------
-* Muchos dispositivos sencillos cuentan con terminales serie.
-* No importa el tipo de Bus.
-* Es sencillo realizar mockups de dispositivos serie, para la etapa de desarrollo y testing.
-
-Desventajas
------------
-* Algunos protocolos y formatos de comunicación no están bien documentados.
-* El acceso a parámetros suele ser limitado
-* Generalmente no es posible tener mas de un dispositivo en el mismo bus.
-* Tenemos que implementar nuestro propio control de errores para los datos que llegan
-
-
-.. raw:: pdf
-
-   PageBreak
-
-Lectura de Peso de una balanza NC3M
------------------------------------
-Esta balanza de la empresa argentina industrias tecnológicas establece un formato propio para leer su salida de datos por puerto serie.
-
-Formato del Dato
-****************
-.. code-block:: text
-    
-    <STX><SIGNO><NETO><STATUS><TARA><CR/LF>
-    
-    <STX> = 0x32 (decimal)(un byte)
-    <SIGNO> = 0x20 (' ') (peso Positivo) o 0x2D (Peso negativo)
-    <NETO> = 6 caracteres mas el punto decimal, (7 Bytes)
-    <STATUS> =  
-        'O'(0x4f) = Sobrecarga
-        'M'(0x4d) = Movimiento
-        ' '(0x20) = Pesada Valida
-    <TARA> = mismo formato que neto
-    <CR/LF> Retorno de Carro y salto de Linea 0x0D 0x0A
-
 En python
-*********
+=========
+
 .. code-block:: python
     :include: code/NC3M_client.py
 
-ModbusTk |modbus|
-==================
+ModbusTk
+========
 
 ModbusTk, es un toolkit para comunicarse con dispositivos de campo, utilizando el protocolo Modbus, ya sea RTU o TCP/IP y para crear dispositivos virtuales (Muy útil para realizar mockups)
-
-.. |modbus| image:: src/modbus.jpg
-   :width: 100%
-
 
 Como funciona Modbus (en forma muy general)
 ----------------------------------------------
@@ -192,15 +73,10 @@ Tanque con sensor ultrasónico, una válvula y una bomba, gobernado por un PLC
 .. image:: src/ejemplo2.png
     :width: 80%  
  
-.. code-block:: python
-   :include: code/ModbusMaster.py
 
-OpenOPC |opc|
-===============
+OpenOPC
+=======
 
-.. |opc| image:: src/opc_logo.gif
-   :width: 50%
-   
 Es un toolkit OPC-DA para python.
 
 Que es OPC?

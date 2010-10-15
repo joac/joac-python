@@ -47,7 +47,7 @@ def main():
     status = ['M', 'O', ' ']
     
     #Establecemos la conexion Serie
-    ser = serial.Serial('/home/joac/COM8')
+    ser = serial.Serial('vserial1')
     
     while True:
         s_data = struct.pack(fmt, '2', 

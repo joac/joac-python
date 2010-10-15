@@ -1,9 +1,9 @@
 {"pageSetup": {
     "width": "16cm",
-    "height": "9cm",
+    "height": "12cm",
     "margin-top": "2mm",
     "margin-bottom": "0mm",
-    "margin-left": ".5cm",
+    "margin-left": "2cm",
     "margin-right": "1cm",
     "margin-gutter": "0cm",
     "spacing-header": "2mm",
@@ -15,7 +15,7 @@
         "frames": [
             ["0", "0", "100%", "100%"]
         ],
-        "background" : "background.svg",
+        "background" : "background.png",
         "showHeader" : true,
         "showFooter" : true
     }
