@@ -20,12 +20,8 @@ Monitoreo y Control Industrial Usando Python
    :width: 50%
 
 :Autor: Joaquín Sorianello <soriasoft@gmail.com>
-:Twitter: @_joac
-:blog: http://www.joaclandia.com.ar
-:Alergias: A los Esparragos
-:Fecha: 15/10/2010
+:Fecha: 16/10/2010
 :Licencia: |cc| |by| |sa| CC-by-sa-2.5
-
 
 De que se trata todo esto
 ==========================
@@ -149,11 +145,42 @@ Formato del Dato
 En python
 *********
 .. code-block:: python
-    :include: code/NC3M_client.py
+    
+    #!-*- coding: utf8 -*-
+    """Cliente serie para la balanza nc3m"""
+    
+    import struct
+    import serial
+    import decimal
+    
+    def decimal_from_nc3m(nc3m_num):
+        """Toma un numero en el formato NC3M y lo convierte a decimal"""
+        nc3m_num = nc3m_num.replace(',', '.')
+        return decimal.Decimal(nc3m_num)
+    
+    def main():
+        #definimos el string de formato
+        fcn = 'c8sc7s2c'
+        #creamos una conexión serie
+        ser = serial.Serial('vserial2')
+        totalizador = 0
+        #Adquirimos los datos
+        while True:
+            a = ser.readline() #Leemos una linea del buffer
+            if len(a) == 19:
+                stx, neto, status, tara, cr, lf = struct.unpack(fcn, a)
+                if status == ' ':  #Chequeamos que la balanza esté en equilibrio
+                    neto = decimal_from_nc3m(neto)
+                    totalizador += neto
+                    print "Peso Neto: %s Peso Acumulado: %s" % ( neto, totalizador)
+    
+    if __name__ == "__main__":
+        print "Cliente serie para balanza NC3M"
+        main()
+
 
 ModbusTk |modbus|
 ==================
-:url: http://code.google.com/p/modbus-tk/
 
 ModbusTk, es un toolkit para comunicarse con dispositivos de campo, utilizando el protocolo Modbus, ya sea RTU o TCP/IP y para crear dispositivos virtuales (Muy útil para realizar mockups)
 
@@ -167,14 +194,14 @@ Como funciona Modbus (en forma muy general)
 Modbus tiene una arquitectura Maestro-Esclavo, donde un único dispositivo Maestro recoge datos y establece parámetros en los dispositivos Esclavos.
 Establece en los dispositivos cuatro tipos de registros:
 
-* Discretas: solo lectura y lecto-escritura
-* Analógicas: solo lectura y lecto-escritura.
+* Discretas
+    - Solo lectura
+    - lecto-escritura
+* Analógicas
+    - solo lectura
+    - lecto-escritura.
 
 Ademas establece códigos de funciones, para realizar operaciones en dichos registros
-
-.. raw:: pdf
-   
-   PageBreak
 
 Ventajas
 --------
@@ -189,10 +216,6 @@ Desventajas
 -----------
 * Muchos PLC (Siemens, por ejemplo) y dispositivos de gama baja no lo implementan.
 * ModbusRTU no soporta Mulimaster.
-
-.. raw:: pdf
-
-   PageBreak
 
 Ejemplo
 -------
@@ -209,9 +232,7 @@ OpenOPC |opc|
 
 .. |opc| image:: src/opc_logo.gif
    :width: 50%
-
-:url: http://openopc.sourceforge.net/
-
+   
 Es un toolkit OPC-DA para python.
 
 Que es OPC?
@@ -234,16 +255,13 @@ Desventajas
 * Los Servidores suelen ser pagos (y bastante caros)
 * Necesitamos un equipo con windows
 
-Ejemplo de juguete
--------------------
+Ejemplo
+-------
+TODO
 
-.. code-block:: python
+Otros módulos de comunicaciones
+===============================
 
-   import OpenOPC
-   opc = OpenOPC.client()
-   opc.connect('Matrikon.OPC.Simulation')
-   print opc['Square Waves.Real8']
-   opc.close()
 
 Porque Python
 =============

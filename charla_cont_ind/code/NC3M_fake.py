@@ -6,6 +6,7 @@ import serial
 import struct
 import time
 import random
+import os
 
 def nc3m_from_float(numero):
     """Toma un número y retorna una cadena numerica en formato nc3m"""
@@ -32,7 +33,7 @@ def fixed_rand_float(signed=False):
        a = a.zfill(7)
     if signed:
         a = random.choice([' ', ' ', ' ', '-']) + a
-    print a
+        print a
     return a
     
 def main():
@@ -45,7 +46,7 @@ def main():
     
     #Posibles estatus
     status = ['M', 'O', ' ']
-    
+
     #Establecemos la conexion Serie
     ser = serial.Serial('vserial1')
     
@@ -59,7 +60,8 @@ def main():
                             )
         ser.write(s_data)
         time.sleep(1)
-    
+        os.system('clear')
+
 if __name__ == "__main__":
     print "Emulando Balanza NC3M"
     main()

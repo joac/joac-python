@@ -18,6 +18,7 @@ def main():
     totalizador = 0
     #Adquirimos los datos
     while True:
+        
         a = ser.readline() #Leemos una linea del buffer
         if len(a) == 19:
             stx, neto, status, tara, cr, lf = struct.unpack(fcn, a)
@@ -25,7 +26,7 @@ def main():
                 neto = decimal_from_nc3m(neto)
                 totalizador += neto
                 print "Peso Neto: %s Peso Acumulado: %s" % ( neto, totalizador)
-
+                
 if __name__ == "__main__":
     print "Cliente serie para balanza NC3M"
     main()

@@ -7,6 +7,7 @@ import modbus_tk.modbus as modbus
 import modbus_tk.modbus_tcp as modbus_tcp
 import time
 import threading
+import os
 
 False = 0
 True = 1
@@ -47,8 +48,8 @@ class PumpSys:
                 print "Nivel: %d litros de %d" % (self.nivel, self.tanque_max)
             if self.nivel <= self.lsl:
                 self.bomba = False
-
-
+        
+        
         else:
             self.status = 0
             print "reposo"
@@ -82,7 +83,7 @@ class PumpSys:
                         }, {
                         'name'  : 'r_analog',
                         'type'  : cst.ANALOG_INPUTS,
-                        'values': ['status', 'tanque_max']
+                        'values': ['status', 'tanque_max', 'nivel']
                         },
                     ]
 
@@ -96,6 +97,7 @@ def main():
         while True:
             sistema.update()
             time.sleep(0.1)
+            os.system('clear')
                 
     finally:
         server.stop()
