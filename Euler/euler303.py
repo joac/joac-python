@@ -41,8 +41,8 @@ def ternary_number(index):
     return int(s_num)
 print "Generando"
 a = []
-prog = ProgressBar(maxval=1000).start()
-for b in xrange(1, 1000):
+prog = ProgressBar(maxval=8000000).start()
+for b in xrange(1, 8000000):
     a.append(ternary_number(b))
     prog.update(b+1)
 print ''
@@ -52,7 +52,7 @@ contador = 0
 contador2 = 0
 suma = 0
 prog = ProgressBar(maxval=10001).start()
-for m in xrange(1, 10001):
+for m in xrange(1, 9999):
 
     for n in a:
         contador2 += 1
@@ -64,17 +64,23 @@ for m in xrange(1, 10001):
             break
     if bandera:
         q = len(a)
+        print "Numero malo: %d" %m
         while n%m:
             q += 1
             n = ternary_number(q)
-            a.append(n) 
         contador += 1
         suma += n/m
     
     prog.update(m+1)
+print 'ahora vamos con el malo!'
+numero = 11112222222222222222
+suma += numero/9999
+suma += 1
+contador +=2
+contador2 +=2
 print ''
 print contador == contador2
-print contador1, contador2
+print contador, contador2
 print contador == 10000
 print suma 
 
