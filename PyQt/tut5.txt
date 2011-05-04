@@ -1,0 +1,499 @@
+==========================
+PyQt By Example: Session 5
+==========================
+
+~~~~~~
+Dialog
+~~~~~~
+
+Requirements
+============
+
+If you have not done it yet, please check the previous sessions:
+    
+* `Session 1`_
+
+* `Session 2`_
+
+* `Session 3`_
+
+* `Session 4`_
+
+All files for this session are here: `Session 5 at GitHub`_. You can use them, or you can follow these instructions starting with the files from `Session 4`_ and see how well you worked!
+
+Dialog
+======
+
+When we finished `session 4`_ we had a TODO application that was able of displaying your task list, and deleting a task, and had the proper UI for that.
+
+.. figure:: window6.png
+
+   A very limited application
+
+The obvious missing pieces are creating and modifying tasks, and that's what we will be implementing today. This is a longer session, because we will do *a lot of work*.
+
+But first, let's consider a course of action, because there are several different ways to do this, and trying to implement something you have not thought about sucks.
+
+Inline Editing
+~~~~~~~~~~~~~~
+
+When the user clicks (or double-clicks?) on a task, he could start editing the task properties in the task item itself.
+
+Examples of this model of interaction include:
+    
+* Spreadsheets
+
+* File renaming in some file managers
+
+* Todo lists in some websites
+
+The good: 
+
+    * Minimal user interface.
+    
+    * Obvious if the user knows about it.
+    
+    * Direct manipulation of the task item is a good metaphor.
+    
+    * Works well in small screens (netbooks, phones)
+    
+The bad:
+    
+    * It's not trivial to implement, for example, a due date/time editor this way (feel free to prove me wrong ;-)
+    
+    * I don't like it much for task addition. Using this paradigm usually means you create   a task using placeholders like "New Task" and then need to edit it. I prefer if the user creates the tasks "fully fledged".
+    
+
+So, maybe it's a good idea to implement this, but I am fully convinced.
+
+Editor Dialog
+~~~~~~~~~~~~~
+
+When the user triggers the "edit task" action, a dialog pops up where he can set the task's properties.
+
+Examples of this model of interaction:
+    
+* File properties in most file managers.
+
+* Configuration dialogs in most applications.
+
+The good:
+    
+    * A separate dialog allows use of a richer UI, because you are not limited by the small space used for inline editing.
+    
+    * The same dialog can be used for task creating with minimal changes.
+    
+    * It would let me show you how to create a proper dialog ;-)
+
+The bad:
+    
+    * Breaks the metaphor. Only do that `when it makes sense`_
+    
+    * Popup dialogs often obscure the main window. Then if you need to check a date from another task, you need to move the dialog aside.
+    
+    * Old fashioned?
+    
+All in all, not a fan of this option as the main mechanism for task editing.
+
+Sliding Panels
+~~~~~~~~~~~~~~
+    
+This is a more modern interaction model: when a task editing action is triggered, a gadget slides into view from one of the window edges, containing the editing widgets.
+
+Examples of this interaction:
+    
+* Firefox's search dialog (Thankfully many apps are using this now, popup search dialogs suck)
+
+* Boxee's menu
+
+* Some phone interfaces
+
+The good:
+    
+    * Rich UI like in a dialog
+    
+    * No popups (Modern?)
+    
+    * Works for adding tasks as well.
+    
+The bad:
+    
+    * Could be confusing?
+
+    * Could not work great in small screens (needs testing!)
+
+      In my screen the widget is only 300px tall, so it should fit even a small form factor screen (A 800x480 netbook?, a QVGA phone?) nicely, although in those cases it will obscure the window app completely. In such small screens "paginated" interfaces are a good idea.
+    
+    * If the main window's form factor is small (as it is for this app), a large panel will obscure most or all the window.
+    
+I think I like this option best, but I am not exactly overcome with enthusiasm. It should also work well as a teaching aid, since we will need to learn to do many things to make it work correctly!
+
+Anyway: if you prefer another approach for this task, you can probably reuse some of the code, and I will be happy to present your alternative implementations here, so go ahead and code them!
+
+Creating the Form
+-----------------
+
+As usual when we do UI work, we start with designer. This time, we will not create a Main Window, but a Widget, and laying out the necessary widgetry. Just put them roughly where you think they should go, here is how I started:
+    
+.. figure:: editor1.png
+
+   Just a draft
+    
+What we are creating here is a classical two-column form: labels on the left, widgets on the right. Almost every program has one of these!
+
+The main goals are (in no particular order):
+    
+1. It should react nicely to resizing.
+
+2. It should not look weird. On any platform, if you can do it.
+
+3. The purpose of each thing in the screen should be obvious.
+
+4. It should be usable by keyboard and mouse.
+
+And here's some steps towards those goals:
+    
+Layouts
+~~~~~~~
+
+1. You can think of this form as a a 2x3 grid. 
+   Group things that go in a single cell using a layout. In our case, we don't have a multi-widget cell.
+    
+2. Select the contents of each "cell" and put them in a form layout. 
+
+   There are other ways to do this, like using a grid layout. Use a form layout instead, because it will look correct (or at least *more* correct) on other platforms which have rules like "align the labels left" or "align the labels right".
+   
+   .. figure:: editor6.png
+   
+      No form layout is **always** right...
+
+3. Right-click on the background and lay out the contents of the widget vertically.
+
+.. figure:: editor2.png
+
+   You can see the layouts outlined in red.
+   
+Keyboard Handling
+~~~~~~~~~~~~~~~~~
+
+1. Configure buddies_. This associates a label to a widget. It's very important, because then you can do the next item ;-)
+
+   .. figure:: editor3.png
+   
+      Buddies.
+
+2. Add shortcuts to the labels. If you change "Due Date" for "&Due Date", the "D" will be underlined and Alt-D will jump to the date editor. If a label is not a buddy for a widget, this does not work!
+
+   .. figure:: editor4.png
+   
+      Shortcuts.
+
+3. `Tab order`_. Usually, you want the tab order to just be the top-to-bottom order of your widgets. That is usually the `least surprising`_ option.
+
+   .. figure:: editor5.png
+   
+      Tab order.
+      
+Miscelaneous
+~~~~~~~~~~~~
+
+Some chores:
+
+1. Change the object names for the important widgets (that is, not for the labels).
+
+2. Tweak attributes (if you have a good reason!)
+
+3. Test it in different styles, see if aything bad happens
+
+4. Rename 
+
+5. Add compiling editor.ui_ to our build.sh_
+
+Let's consider our task editing/creating widget done. Now, we need to integrate it in our main window.
+
+Working on the Main Window
+==========================
+
+Actions
+~~~~~~~
+
+The user interaction is done via actions. We want to enable the user to:
+
+* Create a new task: action "actionNew_Task".
+
+* Modify an existing task: action "actionEdit_Task".
+
+For details on why and how to do this, check `session 4`_, but some UI notes: I placed a separator in the Task menu before "Delete Task" to give it some space, since it's a destructive action. Same thing in the tool bar.
+
+
+Editor Widget
+~~~~~~~~~~~~~
+
+Since the logic form factor for our app's window is "tall and skinny", it makes sense that the editor will slide in from the bottom. 
+
+We will use our editor widget as a "promoted widget" in the main window. That means we do all our designer work using a plain widget as a `stand-in`_ and tell designer that it should "promote" it to the real thing later.
+
+If you create a widget that can be reused by others, it's probably a better idea to make it work as a `custom widget`_ instead, but for us that will not be necessary.
+
+First, we need to create a class that inherits QWidget, which will be our task editor widget.
+
+The simplest version of such a class would look like this (suppose this is in a file called editor.py_):
+    
+.. code-block:: python
+   :linenos:
+
+    """A custom widget that edits a task's properties"""
+
+    # Import the compiled UI module
+    from editorUi import Ui_Form
+
+    class editor(QtGui.QWidget):
+        def __init__(self,parent,task=None):
+            QtGui.QWidget.__init__(self,parent)
+
+            self.ui=Ui_Form()
+            self.ui.setupUi(self)
+
+How can we use it in designer?
+    
+1. Right-click the task list and break its layout.
+
+2. Leave some room below the task list, and put a QWidget there.
+
+3. Select the task list and the placeholder and lay them out in a vertical splitter (it's in the tool bar)
+
+4. Right-click on the form's background and lay it out vertically.
+
+   .. figure:: window7.png
+
+      A placeholder in place.
+   
+5. Right click on the placeholder and select "Promote to..."
+
+   * Base class: QWidget
+
+   * Promoted class name: editor
+   
+   * Header file: editor
+   
+   * Click "Add"
+   
+   * Click "Promote"
+
+   You will not notice any changes. But if you recompile the window and try running ``python main.py`` you will see this:
+    
+   .. figure:: window8.png
+
+      Yes, the editor is there
+
+Cool, isn't it? It's not difficult to reuse these widget aggregates in other applications, or in different contexts in the same app, for example, if I later decide to create a editor *dialog* I can just reuse this widget for both places.
+
+However, this is not how we want our app to appear when first started! We only want the editor to be visible when the user is actually editing a task.
+
+There are several ways to achieve this, but let's go with the simplest one, hide the editor in Main.__init__:
+    
+   .. code-block:: python
+        :linenos:
+          
+        # Create a class for our main window
+        class Main(QtGui.QMainWindow):
+            def __init__(self):
+                QtGui.QMainWindow.__init__(self)
+                
+                # This is always the same
+                self.ui=Ui_MainWindow()
+                self.ui.setupUi(self)
+
+                # Start with the editor hidden
+                self.ui.editor.hide()
+
+Adding a New Task
+-----------------
+
+Since we now have a task editing widget, we can start using it!
+First, let's use it to add new tasks.
+
+As seen in `session 2`_ in order to react to the "actionAdd_Task" we ned to implement Main.on_actionNew_Task_triggered:
+
+.. code-block:: python
+   :linenos:
+
+    def on_actionNew_Task_triggered(self,checked=None):
+        if checked is None: return
+        # Create a dummy task
+        task=todo.Task(text="New Task")
+        
+        # Create an item reflecting the task
+        item=QtGui.QTreeWidgetItem([task.text,str(task.date),""])
+        item.setCheckState(0,QtCore.Qt.Unchecked)
+        item.task=task
+        
+        # Put the item in the task list
+        self.ui.list.addTopLevelItem(item)
+        self.ui.list.setCurrentItem(item)
+        # Save it in the DB
+        todo.saveData()
+        # Open it with the editor
+        self.ui.editor.edit(item)
+
+What this code is doing should be almost obvious. If you don't get it, check the explanation of Main.__init__ and `todo.py`_ in `session 1`_. The non-obvious is the call to editor.edit(item). What's that?
+
+Since the goal of the task editor widget is editing tasks, it needs to know what task to edit, and it needs to be able to save the modifications.
+
+I will implement this using "instant apply", which means there is no save button, no apply button and no ok button. You changed the tags? Well, then the tags are changed ;-)
+
+Here's the full code for the editor widget:
+    
+.. code-block:: python
+   :linenos: 
+
+    class editor(QtGui.QWidget):
+        def __init__(self,parent,task=None):
+            QtGui.QWidget.__init__(self,parent)
+
+            self.ui=Ui_Form()
+            self.ui.setupUi(self)
+            
+            # Start with no task item to edit
+            self.item=None
+
+        def edit(self,item):
+            """Takes an item, loads the widget with the item's
+            task contents, shows the widget"""
+            self.item=item
+            self.ui.task.setText(self.item.task.text)
+            self.ui.done.setChecked(self.item.task.done)
+            dt=self.item.task.date
+            if dt:
+                self.ui.dateTime.setDate(QtCore.QDate(dt.year,dt.month,dt.day))
+                self.ui.dateTime.setTime(QtCore.QTime(dt.hour,dt.minute))
+            else:
+                self.ui.dateTime.setDateTime(QtCore.QDateTime())
+            self.ui.tags.setText(','.join( t.name for t in self.item.task.tags))
+            self.show()
+            
+        def save(self):
+            if self.item==None: return
+            
+            # Save date and time in the task
+            d=self.ui.dateTime.date()
+            t=self.ui.dateTime.time()
+            
+            self.item.task.date=datetime(
+                d.year(),
+                d.month(),
+                d.day(),
+                t.hour(),
+                t.minute()
+            )
+            
+            # Save text in the task
+            self.item.task.text=unicode(self.ui.task.text())
+
+            # Save tags.
+            tags=[s.strip() for s in unicode(self.ui.tags.text()).split(',')]
+            # For each tag, see if it is in the DB. If it is not, create it. If you had 
+            # a million tags, this would be very very wrong code
+            self.item.task.tags=[]
+            for tag in tags:
+                dbTag=todo.Tag.get_by(name=tag)
+                if dbTag is None: # Tag is new, create it
+                    print "Creating tag: ",tag
+                    self.item.task.tags.append(todo.Tag(name=tag))
+                else:
+                    self.item.task.tags.append(dbTag)
+                    
+            # Display the data in the item
+            self.item.setText(0,self.item.task.text)
+            self.item.setText(1,str(self.item.task.date))
+            self.item.setText(2,u','.join(t.name for t in self.item.task.tags))
+
+            todo.saveData()
+
+   
+As you can see, there is a save() method, but we are not calling it anywhere. That's because we will use signals and slots to invoke it.
+
+Open `editor.ui`_ in designer and right-click on the Form QWidget. Then, select "Change signals/slots...", you will see this dialog. I have added the "save()" slot.
+
+.. figure:: editor7.png
+
+   The custom save() slot.
+   
+I did this so I can connect signals to my save() method using designer. So, let's connect every signal marking a change in the content of the dialog to this save() slot:
+    
+.. figure:: editor8.png
+
+   Signals connected to save()
+    
+And then, just like that, it works:
+    
+.. figure:: window9.png
+
+   It's alive! ALIVE!!!!!
+
+Editing Tasks
+-------------
+
+This will be anticlimactic:
+    
+.. code-block:: python
+   :linenos:
+
+    def on_actionEdit_Task_triggered(self,checked=None):
+        if checked is None: return
+
+        # First see what task is "current".
+        item=self.ui.list.currentItem()
+        
+        if not item: # None selected, so we don't know what to edit!
+            return
+            
+        # Open it with the editor
+        self.ui.editor.edit(item)
+
+Coming Soon
+===========
+
+This was our longest session yet, and what have we achieved? No longer is our app useless. It does, in fact, kinda work. However, it is buggy as hell. In the next session I will walk you through some informal interface testing which will show where the defects live, and we will fix a lot of them.
+
+.. figure:: window10.png
+
+.. _instant apply: http://developer.gnome.org/projects/gup/hig/1.0/windows.html#instant-apply
+
+.. _custom widget: http://doc.trolltech.com/qq/qq26-pyqtdesigner.html
+
+.. _stand-in: http://en.wikipedia.org/wiki/Stand-in
+
+.. _editor.ui: http://github.com/ralsina/pyqt-by-example/blob/master/session5/editor.ui
+
+.. _editor.py: http://github.com/ralsina/pyqt-by-example/blob/master/session5/editor.py
+
+.. _todo.py: http://github.com/ralsina/pyqt-by-example/blob/master/session5/editor.py
+
+.. _build.sh: http://github.com/ralsina/pyqt-by-example/blob/master/session5/build.sh
+
+.. _least surprising: http://en.wikipedia.org/wiki/Principle_of_least_astonishment
+
+.. _tab order: http://doc.trolltech.com/4.4/designer-tab-order.html
+
+.. _buddies: http://doc.trolltech.com/4.4/designer-buddy-mode.html
+    
+.. _when it makes sense: http://dot.kde.org/2004/09/27/kcalc-modest-usability-improvement
+
+.. _Session 5 at GitHub: http://github.com/ralsina/pyqt-by-example/tree/master/session5 
+
+.. _Session 1: http://lateral.netmanagers.com.ar/stories/BBS47.html
+
+.. _Session 2: http://lateral.netmanagers.com.ar/stories/BBS48.html
+
+.. _Session 3: http://lateral.netmanagers.com.ar/stories/BBS49.html
+
+.. _Session 4: http://lateral.netmanagers.com.ar/stories/BBS50.html
+
+
+-----------------
+
+Here you can see what changed between the old and new versions:
+
+.. raw:: html
+   :file: session5/diff1.html

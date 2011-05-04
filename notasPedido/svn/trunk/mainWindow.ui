@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>597</width>
+    <height>435</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Malambo! El sistema de Gestion GPL para Pymes</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/logo.svg</normaloff>:/logo.svg</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QStackedWidget" name="sarasa">
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="editorNotas" name="editorNotas_2"/>
+      <widget class="editorProveedor" name="editorProveedor"/>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>597</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_Nuevo">
+    <property name="title">
+     <string>&amp;Nuevo</string>
+    </property>
+    <addaction name="actionNueva_FT"/>
+    <addaction name="actionNueva_Nota_Pedido"/>
+    <addaction name="action_NuevoProveedor"/>
+    <addaction name="action_NuevoCliente"/>
+   </widget>
+   <widget class="QMenu" name="menu_Informes">
+    <property name="title">
+     <string>&amp;Informes</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_Ver">
+    <property name="title">
+     <string>&amp;Ver</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_Herramientas">
+    <property name="title">
+     <string>&amp;Herramientas</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_Acerca_de">
+    <property name="title">
+     <string>&amp;Acerca de</string>
+    </property>
+   </widget>
+   <addaction name="menu_Nuevo"/>
+   <addaction name="menu_Informes"/>
+   <addaction name="menu_Ver"/>
+   <addaction name="menu_Herramientas"/>
+   <addaction name="menu_Acerca_de"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNueva_Nota_Pedido"/>
+  </widget>
+  <action name="actionNueva_FT">
+   <property name="text">
+    <string>Ficha de &amp;Trabajo</string>
+   </property>
+   <property name="toolTip">
+    <string>Crea Una Nueva Ficha Técnica</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
+   </property>
+  </action>
+  <action name="actionNueva_Nota_Pedido">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/nuevo_Pedido.svg</normaloff>:/nuevo_Pedido.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Nota de &amp;Pedido</string>
+   </property>
+   <property name="toolTip">
+    <string>Crea una nueva nota de Pedido</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="action_NuevoProveedor">
+   <property name="text">
+    <string>P&amp;roveedor</string>
+   </property>
+   <property name="toolTip">
+    <string>Crea un nuevo proveedor</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="action_NuevoCliente">
+   <property name="text">
+    <string>&amp;Cliente</string>
+   </property>
+   <property name="toolTip">
+    <string>Crea un nuevo Cliente</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>editorNotas</class>
+   <extends>QWidget</extends>
+   <header>editorNotas</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>editorProveedor</class>
+   <extends>QWidget</extends>
+   <header>editorProveedor</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -112,7 +112,7 @@ class Solver(Screen):
     
 if __name__ == '__main__':
     os.system('clear')
-    tokens = [str(d) for d in xrange(1, 5)]
+    tokens = [str(d) for d in xrange(1, 9)]
     screen = Screen(20, 20, tokens)
     print screen
     screen.update(screen.childs[0].attrib) #dirty Hack

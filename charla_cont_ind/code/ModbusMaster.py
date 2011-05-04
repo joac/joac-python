@@ -3,11 +3,17 @@
 
 import modbus_tk
 from modbus_tk.defines import *
+
 import modbus_tk.modbus as modbus
 import modbus_tk.modbus_tcp as modbus_tcp
+from multiprocessing.managers import BaseManager
 import time
 import threading
 import os
+
+class QueueManager(BaseManager): pass
+
+QueueManager.register('get_queue')
 
 def main():
     try:
@@ -15,10 +21,22 @@ def main():
         master = modbus_tcp.TcpMaster(port=8502, timeout_in_sec=10.0)
         
         master.execute(1, WRITE_SINGLE_COIL, 0, 1, output_value=1)
+        
+        m = QueueManager(address=('', 50000), authkey='abracadabra')
+        m.connect()
+        queue = m.get_queue()
 
         #Iniciamos un ciclo de adquisicion de datos
         while True:
             # Leemos las bobinas
+            if queue.qsize():
+                msg = queue.get()
+                if msg == 'start':
+                    master.execute(1, WRITE_SINGLE_COIL, 0, 1, output_value=1)
+                elif msg == 'stop':
+                    master.execute(1, WRITE_SINGLE_COIL, 0, 1, output_value=0)
+                print msg
+
             coils = master.execute(1, READ_COILS,0, 3)
             print "Iniciado %d | Valvula %d | Bomba %d " % coils
             # Leemos las entradas analogicas

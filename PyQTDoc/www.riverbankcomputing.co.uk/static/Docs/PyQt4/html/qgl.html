@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html><head><title>QGL Class Reference</title><style>h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }
+td.postheader { font-family: sans-serif }
+tr.address { font-family: sans-serif }
+body { background: #ffffff; color: black; }
+</style></head><body><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr /><td align="left" valign="top" width="32"><img align="left" border="0" height="32" src="images/rb-logo.png" width="32" /></td><td width="1">&#160;&#160;</td><td class="postheader" valign="center"><a href="../pyqt4ref.html"><font color="#004faf">Home</font></a>&#160;&#183; <a href="classes.html"><font color="#004faf">All Classes</font></a>&#160;&#183; <a href="modules.html"><font color="#004faf">Modules</font></a></td></table><h1 align="center">QGL Class Reference<br /><sup><sup>[<a href="qtopengl.html">QtOpenGL</a> module]</sup></sup></h1><p>The QGL namespace specifies miscellaneous identifiers used in the Qt OpenGL module. <a href="#details">More...</a></p>
+<h3>Types</h3><ul><li><div class="fn" />enum <b><a href="qgl.html#FormatOption-enum">FormatOption</a></b> { DoubleBuffer, DepthBuffer, Rgba, AlphaChannel, ..., NoSampleBuffers }</li><li><div class="fn" />class <b><a href="qgl-formatoptions.html">FormatOptions</a></b></li></ul><a name="details" /><hr /><h2>Detailed Description</h2><p>The QGL namespace specifies miscellaneous identifiers used in the Qt OpenGL module.</p>
+<hr /><h2>Type Documentation</h2><h3 class="fn"><a name="FormatOption-enum" />QGL.FormatOption</h3><p>This enum specifies the format options that can be used to configure an OpenGL context. These are set using <a href="qglformat.html#setOption">QGLFormat.setOption</a>().</p>
+<p><table border="1" cellpadding="2" cellspacing="1" width="100%">
+<tr><th width="25%">Constant</th><th width="15%">Value</th><th width="60%">Description</th></tr>
+<tr><td valign="top"><tt>QGL.DoubleBuffer</tt></td><td align="center" valign="top"><tt>0x0001</tt></td><td valign="top">Specifies the use of double buffering.</td></tr>
+<tr><td valign="top"><tt>QGL.DepthBuffer</tt></td><td align="center" valign="top"><tt>0x0002</tt></td><td valign="top">Enables the use of a depth buffer.</td></tr>
+<tr><td valign="top"><tt>QGL.Rgba</tt></td><td align="center" valign="top"><tt>0x0004</tt></td><td valign="top">Specifies that the context should use RGBA as its pixel format.</td></tr>
+<tr><td valign="top"><tt>QGL.AlphaChannel</tt></td><td align="center" valign="top"><tt>0x0008</tt></td><td valign="top">Enables the use of an alpha channel.</td></tr>
+<tr><td valign="top"><tt>QGL.AccumBuffer</tt></td><td align="center" valign="top"><tt>0x0010</tt></td><td valign="top">Enables the use of an accumulation buffer.</td></tr>
+<tr><td valign="top"><tt>QGL.StencilBuffer</tt></td><td align="center" valign="top"><tt>0x0020</tt></td><td valign="top">Enables the use of a stencil buffer.</td></tr>
+<tr><td valign="top"><tt>QGL.StereoBuffers</tt></td><td align="center" valign="top"><tt>0x0040</tt></td><td valign="top">Enables the use of a stereo buffers for use with visualization hardware.</td></tr>
+<tr><td valign="top"><tt>QGL.DirectRendering</tt></td><td align="center" valign="top"><tt>0x0080</tt></td><td valign="top">Specifies that the context is used for direct rendering to a display.</td></tr>
+<tr><td valign="top"><tt>QGL.HasOverlay</tt></td><td align="center" valign="top"><tt>0x0100</tt></td><td valign="top">Enables the use of an overlay.</td></tr>
+<tr><td valign="top"><tt>QGL.SampleBuffers</tt></td><td align="center" valign="top"><tt>0x0200</tt></td><td valign="top">Enables the use of sample buffers.</td></tr>
+<tr><td valign="top"><tt>QGL.SingleBuffer</tt></td><td align="center" valign="top"><tt>DoubleBuffer&lt;&lt;16</tt></td><td valign="top">Specifies the use of a single buffer, as opposed to double buffers.</td></tr>
+<tr><td valign="top"><tt>QGL.NoDepthBuffer</tt></td><td align="center" valign="top"><tt>DepthBuffer&lt;&lt;16</tt></td><td valign="top">Disables the use of a depth buffer.</td></tr>
+<tr><td valign="top"><tt>QGL.ColorIndex</tt></td><td align="center" valign="top"><tt>Rgba&lt;&lt;16</tt></td><td valign="top">Specifies that the context should use a color index as its pixel format.</td></tr>
+<tr><td valign="top"><tt>QGL.NoAlphaChannel</tt></td><td align="center" valign="top"><tt>AlphaChannel&lt;&lt;16</tt></td><td valign="top">Disables the use of an alpha channel.</td></tr>
+<tr><td valign="top"><tt>QGL.NoAccumBuffer</tt></td><td align="center" valign="top"><tt>AccumBuffer&lt;&lt;16</tt></td><td valign="top">Disables the use of an accumulation buffer.</td></tr>
+<tr><td valign="top"><tt>QGL.NoStencilBuffer</tt></td><td align="center" valign="top"><tt>StencilBuffer&lt;&lt;16</tt></td><td valign="top">Disables the use of a stencil buffer.</td></tr>
+<tr><td valign="top"><tt>QGL.NoStereoBuffers</tt></td><td align="center" valign="top"><tt>StereoBuffers&lt;&lt;16</tt></td><td valign="top">Disables the use of stereo buffers.</td></tr>
+<tr><td valign="top"><tt>QGL.IndirectRendering</tt></td><td align="center" valign="top"><tt>DirectRendering&lt;&lt;16</tt></td><td valign="top">Specifies that the context is used for indirect rendering to a buffer.</td></tr>
+<tr><td valign="top"><tt>QGL.NoOverlay</tt></td><td align="center" valign="top"><tt>HasOverlay&lt;&lt;16</tt></td><td valign="top">Disables the use of an overlay.</td></tr>
+<tr><td valign="top"><tt>QGL.NoSampleBuffers</tt></td><td align="center" valign="top"><tt>SampleBuffers&lt;&lt;16</tt></td><td valign="top">Disables the use of sample buffers.</td></tr>
+</table></p>
+<p>The FormatOptions type is a typedef for <a href="qflags.html">QFlags</a>&lt;FormatOption&gt;. It stores an OR combination of FormatOption values.</p>
+<p>See also <a href="opengl-samplebuffers.html">Sample Buffers Example</a>.</p>
+<p /><address><hr /><div align="center"><table border="0" cellspacing="0" width="100%"><tr class="address"><td align="left" width="25%">PyQt&#160;4.6.2 for X11</td><td align="center" width="50%">Copyright &#169; <a href="http://www.riverbankcomputing.com">Riverbank&#160;Computing&#160;Ltd</a> and <a href="http://www.qtsoftware.com">Nokia</a> 2009</td><td align="right" width="25%">Qt&#160;4.5.3</td></tr></table></div></address></body></html>

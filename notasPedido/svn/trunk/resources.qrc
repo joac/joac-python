@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/" >
+    <file>nuevo_Pedido.svg</file>
+    <file>logo.svg</file>
+  </qresource>
+</RCC>

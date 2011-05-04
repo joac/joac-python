@@ -1,0 +1,139 @@
+body {
+  background-color: #000000;
+  font-family: "Tiny Box BlackBitA8";
+  font-size: 12px;
+  width: 420px;
+  position: absolute;
+  left: 50%;
+  margin-left: -210px;
+  top: 50%;
+  margin-top: -237px;
+}
+h1 {
+  padding: 0px;
+  font-family: "Tiny Box BlackBitA8";
+  font-size: 12px;
+  color: #d91c5c;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 3px;
+  }
+h2 {
+  font-family: "Tiny Box BlackBitA8";
+  font-size: 12px;
+  color: #00b0d8;
+  margin-top: 4px;
+}
+h3 {
+  font-family: "Tiny Box BlackBitA8";
+  font-size: 12px;
+  margin-top: 9px;
+  color: #bed63a;
+}
+#pageHeader {
+  background-color: #ffffff;
+  width: 420px;
+  height: 43px;
+  position: absolute; 
+  
+}
+#pageContents {
+  border-style: none;
+  padding: 0px;
+  background-color: #ffffff;
+
+  width: 420px;
+  height: 420px;
+  position: absolute;
+  top: 53px; 
+}
+#contentsMedia {
+  padding: 0px;
+  width: 400px;
+  background-color: #000000;
+  height: 320px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+#contentsData {
+  padding: 0px;
+  background-color: #e6e6e6;
+  width: 400px;
+  height: 70px;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 70px;
+}
+#footer {
+  padding: 0px;
+  background-color: #ffffff;
+  width: 420px;
+  height: 30px;
+  margin-top: 0px;
+  margin-left: 0px;
+  position: relative;
+  top: 10px;
+  text-align: center;
+
+  
+}
+#logo {
+  position: absolute;
+  background-position:  center center;
+  background-repeat: no-repeat;
+  background-image: url("static/logo.png");
+  
+  width: 77px;
+  height: 29px;
+  top: 7px;
+  left: 7px;
+  }
+
+#name {
+  position: absolute;
+  background-position:  center center;
+  background-repeat: no-repeat;
+  background-image: url("static/name.png");
+  
+  width: 111px;
+  height: 9px;
+  top: 7px;
+  right: 7px;
+  ;
+  }
+#vimeo {
+  position: absolute; 
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("static/vimeo.png");
+  width: 51px;
+  height: 16px;
+  bottom: 7px;
+  right: 7px;
+  cursor: pointer}
+#mail {
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("static/mail.png");
+  width: 26px;
+  height: 16px;
+  bottom: 7px;
+  right: 62px;
+  cursor: pointer;
+  }
+#cv {
+  position: absolute; 
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("static/CV.png");
+  width: 26px;
+  height: 16px;
+  bottom: 7px;
+  right: 92px;
+  cursor: pointer;
+  }
+ 

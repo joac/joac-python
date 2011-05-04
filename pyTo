@@ -1,0 +1,63 @@
+#-*- coding: utf-8 -*-
+"""Un simple Backend para una aplicación TODO, usando Elixir"""
+
+import os
+from elixir import *
+
+dbdir=os.path.join(os.path.expanduser("~"), ".pyqtodo")
+dbfile=os.path.join(dbdir, "tasks.sqlite")
+
+class Task(Entity):
+    """Una Tarea para la Lista TODO"""
+    using_options(tablename='tasks')
+    text = Field(Unicode, required=True)
+    date = Field(DateTime, default=None, required=False)
+    done = Field(Boolean,default=False, required=True)
+    tags = ManyToMany("Tag")
+
+    def __repr__(self):
+        return "Tarea:"+self.text
+
+class Tag(Entity):
+    """Una Etiqueta (tag) que podemos aplicar a la tarea"""
+
+    using_options(tablename='tags')
+    name = Field(Unicode, required= True)
+    tasks = ManyToMany("Task")
+
+    def __repr__(self):
+        return "Tag:"+self.name
+
+def initDB():
+
+    if not os.path.isdir(dbdir):
+        os.mkdir(dbdir)
+
+    metadata.bind = "sqlite:///%s"%dbfile
+    setup_all()
+    if not os.path.exists(dbfile):
+         create_all()
+
+def main():
+    initDB()
+
+    verde=Tag(name=u"verde")
+    rojo=Tag(name=u"rojo")
+
+    tarea1=Task(text=u"Comprar Tomate", tags=[rojo])
+    tarea2=Task(text=u"Comprar Morron",tags=[rojo])
+    tarea3=Task(text=u"Comprar Lechuga", tags=[verde])
+    tarea4=Task(text=u"Comprar Frutillas", tags=[rojo, verde])
+    session.commit()
+
+    print "Tareas Verdes:"
+    print verde.tasks
+    print
+    print "Tareas Rojas:"
+    print rojo.tasks
+    print
+    print "Tareas con l"
+    print [(t.id, t.text, t.done) for t in Task.query.filter(Task.text.like(ur'%l%')).all()]
+
+if __name__ =="__main__":
+    main()

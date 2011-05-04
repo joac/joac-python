@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html><head><title>QWebSettings Class Reference</title><style>h3.fn,span.fn { margin-left: 1cm; text-indent: -1cm }
+a:link { color: #004faf; text-decoration: none }
+a:visited { color: #672967; text-decoration: none }
+td.postheader { font-family: sans-serif }
+tr.address { font-family: sans-serif }
+body { background: #ffffff; color: black; }
+</style></head><body><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr /><td align="left" valign="top" width="32"><img align="left" border="0" height="32" src="images/rb-logo.png" width="32" /></td><td width="1">&#160;&#160;</td><td class="postheader" valign="center"><a href="../pyqt4ref.html"><font color="#004faf">Home</font></a>&#160;&#183; <a href="classes.html"><font color="#004faf">All Classes</font></a>&#160;&#183; <a href="modules.html"><font color="#004faf">Modules</font></a></td></table><h1 align="center">QWebSettings Class Reference<br /><sup><sup>[<a href="qtwebkit.html">QtWebKit</a> module]</sup></sup></h1><p>The QWebSettings class provides an object to store the settings used by <a href="qwebpage.html">QWebPage</a> and <a href="qwebframe.html">QWebFrame</a>. <a href="#details">More...</a></p>
+<h3>Types</h3><ul><li><div class="fn" />enum <b><a href="qwebsettings.html#FontFamily-enum">FontFamily</a></b> { StandardFont, FixedFont, SerifFont, SansSerifFont, CursiveFont, FantasyFont }</li><li><div class="fn" />enum <b><a href="qwebsettings.html#FontSize-enum">FontSize</a></b> { MinimumFontSize, MinimumLogicalFontSize, DefaultFontSize, DefaultFixedFontSize }</li><li><div class="fn" />enum <b><a href="qwebsettings.html#WebAttribute-enum">WebAttribute</a></b> { AutoLoadImages, JavascriptEnabled, JavaEnabled, PluginsEnabled, ..., LocalStorageDatabaseEnabled }</li><li><div class="fn" />enum <b><a href="qwebsettings.html#WebGraphic-enum">WebGraphic</a></b> { MissingImageGraphic, MissingPluginGraphic, DefaultFrameIconGraphic, TextAreaSizeGripCornerGraphic }</li></ul><h3>Methods</h3><ul><li><div class="fn" />QString <b><a href="qwebsettings.html#fontFamily">fontFamily</a></b> (<i>self</i>, FontFamily&#160;<i>which</i>)</li><li><div class="fn" />int <b><a href="qwebsettings.html#fontSize">fontSize</a></b> (<i>self</i>, FontSize&#160;<i>type</i>)</li><li><div class="fn" /><b><a href="qwebsettings.html#resetAttribute">resetAttribute</a></b> (<i>self</i>, WebAttribute&#160;<i>attr</i>)</li><li><div class="fn" /><b><a href="qwebsettings.html#resetFontFamily">resetFontFamily</a></b> (<i>self</i>, FontFamily&#160;<i>which</i>)</li><li><div class="fn" /><b><a href="qwebsettings.html#resetFontSize">resetFontSize</a></b> (<i>self</i>, FontSize&#160;<i>type</i>)</li><li><div class="fn" /><b><a href="qwebsettings.html#setAttribute">setAttribute</a></b> (<i>self</i>, WebAttribute&#160;<i>attr</i>, bool&#160;<i>on</i>)</li><li><div class="fn" /><b><a href="qwebsettings.html#setFontFamily">setFontFamily</a></b> (<i>self</i>, FontFamily&#160;<i>which</i>, QString&#160;<i>family</i>)</li><li><div class="fn" /><b><a href="qwebsettings.html#setFontSize">setFontSize</a></b> (<i>self</i>, FontSize&#160;<i>type</i>, int&#160;<i>size</i>)</li><li><div class="fn" /><b><a href="qwebsettings.html#setUserStyleSheetUrl">setUserStyleSheetUrl</a></b> (<i>self</i>, QUrl&#160;<i>location</i>)</li><li><div class="fn" />bool <b><a href="qwebsettings.html#testAttribute">testAttribute</a></b> (<i>self</i>, WebAttribute&#160;<i>attr</i>)</li><li><div class="fn" />QUrl <b><a href="qwebsettings.html#userStyleSheetUrl">userStyleSheetUrl</a></b> (<i>self</i>)</li></ul><h3>Static Methods</h3><ul><li><div class="fn" /><b><a href="qwebsettings.html#clearIconDatabase">clearIconDatabase</a></b> ()</li><li><div class="fn" />QWebSettings <b><a href="qwebsettings.html#globalSettings">globalSettings</a></b> ()</li><li><div class="fn" />QString <b><a href="qwebsettings.html#iconDatabasePath">iconDatabasePath</a></b> ()</li><li><div class="fn" />QIcon <b><a href="qwebsettings.html#iconForUrl">iconForUrl</a></b> (QUrl&#160;<i>url</i>)</li><li><div class="fn" />int <b><a href="qwebsettings.html#maximumPagesInCache">maximumPagesInCache</a></b> ()</li><li><div class="fn" />long <b><a href="qwebsettings.html#offlineStorageDefaultQuota">offlineStorageDefaultQuota</a></b> ()</li><li><div class="fn" />QString <b><a href="qwebsettings.html#offlineStoragePath">offlineStoragePath</a></b> ()</li><li><div class="fn" /><b><a href="qwebsettings.html#setIconDatabasePath">setIconDatabasePath</a></b> (QString&#160;<i>location</i>)</li><li><div class="fn" /><b><a href="qwebsettings.html#setMaximumPagesInCache">setMaximumPagesInCache</a></b> (int&#160;<i>pages</i>)</li><li><div class="fn" /><b><a href="qwebsettings.html#setObjectCacheCapacities">setObjectCacheCapacities</a></b> (int&#160;<i>cacheMinDeadCapacity</i>, int&#160;<i>cacheMaxDead</i>, int&#160;<i>totalCapacity</i>)</li><li><div class="fn" /><b><a href="qwebsettings.html#setOfflineStorageDefaultQuota">setOfflineStorageDefaultQuota</a></b> (long&#160;<i>maximumSize</i>)</li><li><div class="fn" /><b><a href="qwebsettings.html#setOfflineStoragePath">setOfflineStoragePath</a></b> (QString&#160;<i>path</i>)</li><li><div class="fn" /><b><a href="qwebsettings.html#setWebGraphic">setWebGraphic</a></b> (WebGraphic&#160;<i>type</i>, QPixmap&#160;<i>graphic</i>)</li><li><div class="fn" />QPixmap <b><a href="qwebsettings.html#webGraphic">webGraphic</a></b> (WebGraphic&#160;<i>type</i>)</li></ul><a name="details" /><hr /><h2>Detailed Description</h2><p>The QWebSettings class provides an object to store the settings used by <a href="qwebpage.html">QWebPage</a> and <a href="qwebframe.html">QWebFrame</a>.</p>
+<p>Each <a href="qwebpage.html">QWebPage</a> object has its own QWebSettings object, which configures the settings for that page. If a setting is not configured, then it is looked up in the global settings object, which can be accessed using <a href="qwebsettings.html#globalSettings">QWebSettings.globalSettings</a>().</p>
+<p>QWebSettings allows configuring font properties such as font size and font family, the location of a custom stylesheet, and generic attributes like java script, plugins, etc. The <a href="qwebsettings.html#WebAttribute-enum">WebAttribute</a> enum further describes this.</p>
+<p>QWebSettings also configures global properties such as the web page memory cache and the web page icon database, local database storage and offline applications storage.</p>
+<a name="web-application-support" />
+<h3>Web Application Support</h3>
+<p>WebKit provides support for features specified in <a href="http://www.w3.org/TR/html5/">HTML 5</a> that improve the performance and capabilities of Web applications. These include client-side (offline) storage and the use of a Web application cache.</p>
+<p>Client-side (offline) storage is an improvement over the use of cookies to store persistent data in Web applications. Applications can configure and enable the use of an offline storage database by calling the <a href="qwebsettings.html#setOfflineStoragePath">setOfflineStoragePath</a>() with an appropriate file path, and can limit the quota for each application by calling <a href="qwebsettings.html#setOfflineStorageDefaultQuota">setOfflineStorageDefaultQuota</a>().</p>
+<p>See also <a href="qwebpage.html#settings">QWebPage.settings</a>(), <a href="qwebview.html#settings">QWebView.settings</a>(), and <a href="qtwebkit.html#browser">Browser</a>.</p>
+<hr /><h2>Type Documentation</h2><h3 class="fn"><a name="FontFamily-enum" />QWebSettings.FontFamily</h3><p>This enum describes the generic font families defined by CSS 2. For more information see the <a href="http://www.w3.org/TR/REC-CSS2/fonts.html#generic-font-families">CSS standard</a>.</p>
+<p><table border="1" cellpadding="2" cellspacing="1" width="40%">
+<tr><th width="60%">Constant</th><th width="40%">Value</th></tr>
+<tr><td valign="top"><tt>QWebSettings.StandardFont</tt></td><td align="center" valign="top"><tt>0</tt></td></tr>
+<tr><td valign="top"><tt>QWebSettings.FixedFont</tt></td><td align="center" valign="top"><tt>1</tt></td></tr>
+<tr><td valign="top"><tt>QWebSettings.SerifFont</tt></td><td align="center" valign="top"><tt>2</tt></td></tr>
+<tr><td valign="top"><tt>QWebSettings.SansSerifFont</tt></td><td align="center" valign="top"><tt>3</tt></td></tr>
+<tr><td valign="top"><tt>QWebSettings.CursiveFont</tt></td><td align="center" valign="top"><tt>4</tt></td></tr>
+<tr><td valign="top"><tt>QWebSettings.FantasyFont</tt></td><td align="center" valign="top"><tt>5</tt></td></tr>
+</table></p>
+<h3 class="fn"><a name="FontSize-enum" />QWebSettings.FontSize</h3><p>This enum describes the font sizes configurable through <a href="qwebsettings.html">QWebSettings</a>.</p>
+<p><table border="1" cellpadding="2" cellspacing="1" width="100%">
+<tr><th width="25%">Constant</th><th width="15%">Value</th><th width="60%">Description</th></tr>
+<tr><td valign="top"><tt>QWebSettings.MinimumFontSize</tt></td><td align="center" valign="top"><tt>0</tt></td><td valign="top">The hard minimum font size.</td></tr>
+<tr><td valign="top"><tt>QWebSettings.MinimumLogicalFontSize</tt></td><td align="center" valign="top"><tt>1</tt></td><td valign="top">The minimum logical font size that is applied after zooming with <a href="qwebframe.html">QWebFrame</a>'s textSizeMultiplier().</td></tr>
+<tr><td valign="top"><tt>QWebSettings.DefaultFontSize</tt></td><td align="center" valign="top"><tt>2</tt></td><td valign="top">The default font size for regular text.</td></tr>
+<tr><td valign="top"><tt>QWebSettings.DefaultFixedFontSize</tt></td><td align="center" valign="top"><tt>3</tt></td><td valign="top">The default font size for fixed-pitch text.</td></tr>
+</table></p>
+<h3 class="fn"><a name="WebAttribute-enum" />QWebSettings.WebAttribute</h3><p>This enum describes various attributes that are configurable through <a href="qwebsettings.html">QWebSettings</a>.</p>
+<p><table border="1" cellpadding="2" cellspacing="1" width="100%">
+<tr><th width="25%">Constant</th><th width="15%">Value</th><th width="60%">Description</th></tr>
+<tr><td valign="top"><tt>QWebSettings.AutoLoadImages</tt></td><td align="center" valign="top"><tt>0</tt></td><td valign="top">Specifies whether images are automatically loaded in web pages.</td></tr>
+<tr><td valign="top"><tt>QWebSettings.JavascriptEnabled</tt></td><td align="center" valign="top"><tt>1</tt></td><td valign="top">Enables or disables the running of JavaScript programs.</td></tr>
+<tr><td valign="top"><tt>QWebSettings.JavaEnabled</tt></td><td align="center" valign="top"><tt>2</tt></td><td valign="top">Enables or disables Java applets. Currently Java applets are not supported.</td></tr>
+<tr><td valign="top"><tt>QWebSettings.PluginsEnabled</tt></td><td align="center" valign="top"><tt>3</tt></td><td valign="top">Enables or disables plugins in Web pages.</td></tr>
+<tr><td valign="top"><tt>QWebSettings.PrivateBrowsingEnabled</tt></td><td align="center" valign="top"><tt>4</tt></td><td valign="top">Private browsing prevents WebKit from recording visited pages in the history and storing web page icons.</td></tr>
+<tr><td valign="top"><tt>QWebSettings.JavascriptCanOpenWindows</tt></td><td align="center" valign="top"><tt>5</tt></td><td valign="top">Specifies whether JavaScript programs can open new windows.</td></tr>
+<tr><td valign="top"><tt>QWebSettings.JavascriptCanAccessClipboard</tt></td><td align="center" valign="top"><tt>6</tt></td><td valign="top">Specifies whether JavaScript programs can read or write to the clipboard.</td></tr>
+<tr><td valign="top"><tt>QWebSettings.DeveloperExtrasEnabled</tt></td><td align="center" valign="top"><tt>7</tt></td><td valign="top">Enables extra tools for Web developers. Currently this enables the "Inspect" element in the context menu, which shows the WebKit WebInspector for web site debugging.</td></tr>
+<tr><td valign="top"><tt>QWebSettings.LinksIncludedInFocusChain</tt></td><td align="center" valign="top"><tt>8</tt></td><td valign="top">Specifies whether hyperlinks should be included in the keyboard focus chain.</td></tr>
+<tr><td valign="top"><tt>QWebSettings.ZoomTextOnly</tt></td><td align="center" valign="top"><tt>9</tt></td><td valign="top">Specifies whether the zoom factor on a frame applies to only the text or all content.</td></tr>
+<tr><td valign="top"><tt>QWebSettings.PrintElementBackgrounds</tt></td><td align="center" valign="top"><tt>10</tt></td><td valign="top">Specifies whether the background color and images are also drawn when the page is printed.</td></tr>
+<tr><td valign="top"><tt>QWebSettings.OfflineStorageDatabaseEnabled</tt></td><td align="center" valign="top"><tt>11</tt></td><td valign="top">Specifies whether support for the HTML 5 offline storage feature is enabled or not.</td></tr>
+<tr><td valign="top"><tt>QWebSettings.OfflineWebApplicationCacheEnabled</tt></td><td align="center" valign="top"><tt>12</tt></td><td valign="top">Specifies whether support for the HTML 5 web application cache feature is enabled or not.</td></tr>
+<tr><td valign="top"><tt>QWebSettings.LocalStorageDatabaseEnabled</tt></td><td align="center" valign="top"><tt>13</tt></td><td valign="top">Specifies whether support for the HTML 5 local storage feature is enabled or not.</td></tr>
+</table></p>
+<h3 class="fn"><a name="WebGraphic-enum" />QWebSettings.WebGraphic</h3><p>This enums describes the standard graphical elements used in webpages.</p>
+<p><table border="1" cellpadding="2" cellspacing="1" width="100%">
+<tr><th width="25%">Constant</th><th width="15%">Value</th><th width="60%">Description</th></tr>
+<tr><td valign="top"><tt>QWebSettings.MissingImageGraphic</tt></td><td align="center" valign="top"><tt>0</tt></td><td valign="top">The replacement graphic shown when an image could not be loaded.</td></tr>
+<tr><td valign="top"><tt>QWebSettings.MissingPluginGraphic</tt></td><td align="center" valign="top"><tt>1</tt></td><td valign="top">The replacement graphic shown when a plugin could not be loaded.</td></tr>
+<tr><td valign="top"><tt>QWebSettings.DefaultFrameIconGraphic</tt></td><td align="center" valign="top"><tt>2</tt></td><td valign="top">The default icon for <a href="qwebframe.html#icon-prop">QWebFrame.icon</a>().</td></tr>
+<tr><td valign="top"><tt>QWebSettings.TextAreaSizeGripCornerGraphic</tt></td><td align="center" valign="top"><tt>3</tt></td><td valign="top">The graphic shown for the size grip of text areas.</td></tr>
+</table></p>
+<hr /><h2>Method Documentation</h2><h3 class="fn"><a name="clearIconDatabase" />QWebSettings.clearIconDatabase ()</h3><p>Clears the icon database.</p>
+<h3 class="fn"><a name="fontFamily" />QString QWebSettings.fontFamily (<i>self</i>, <a href="qwebsettings.html#FontFamily-enum">FontFamily</a>&#160;<i>which</i>)</h3><p>Returns the actual font family for the specified generic font family, <i>which</i>.</p>
+<p>See also <a href="qwebsettings.html#setFontFamily">setFontFamily</a>().</p>
+<h3 class="fn"><a name="fontSize" />int QWebSettings.fontSize (<i>self</i>, <a href="qwebsettings.html#FontSize-enum">FontSize</a>&#160;<i>type</i>)</h3><p>Returns the default font size for <i>type</i>.</p>
+<p>See also <a href="qwebsettings.html#setFontSize">setFontSize</a>().</p>
+<h3 class="fn"><a name="globalSettings" /><a href="qwebsettings.html">QWebSettings</a> QWebSettings.globalSettings ()</h3><p>Returns the global settings object.</p>
+<p>Any setting changed on the default object is automatically applied to all <a href="qwebpage.html">QWebPage</a> instances where the particular setting is not overriden already.</p>
+<h3 class="fn"><a name="iconDatabasePath" />QString QWebSettings.iconDatabasePath ()</h3><p>Returns the path of the icon database or an empty string if the icon database is disabled.</p>
+<p>See also <a href="qwebsettings.html#setIconDatabasePath">setIconDatabasePath</a>() and <a href="qwebsettings.html#clearIconDatabase">clearIconDatabase</a>().</p>
+<h3 class="fn"><a name="iconForUrl" /><a href="qicon.html">QIcon</a> QWebSettings.iconForUrl (<a href="qurl.html">QUrl</a>&#160;<i>url</i>)</h3><p>Returns the web site's icon for <i>url</i>.</p>
+<p>If the web site does not specify an icon, or the icon is not in the database, a null <a href="qicon.html">QIcon</a> is returned.</p>
+<p><b>Note:</b> The returned icon's size is arbitrary.</p>
+<p>See also <a href="qwebsettings.html#setIconDatabasePath">setIconDatabasePath</a>().</p>
+<h3 class="fn"><a name="maximumPagesInCache" />int QWebSettings.maximumPagesInCache ()</h3><p>Returns the maximum number of web pages that are kept in the memory cache.</p>
+<p>See also <a href="qwebsettings.html#setMaximumPagesInCache">setMaximumPagesInCache</a>().</p>
+<h3 class="fn"><a name="offlineStorageDefaultQuota" />long QWebSettings.offlineStorageDefaultQuota ()</h3><p>Returns the value of the default quota for new offline storage databases.</p>
+<p>This function was introduced in Qt 4.5.</p>
+<p>See also <a href="qwebsettings.html#setOfflineStorageDefaultQuota">setOfflineStorageDefaultQuota</a>().</p>
+<h3 class="fn"><a name="offlineStoragePath" />QString QWebSettings.offlineStoragePath ()</h3><p>Returns the path of the HTML5 offline storage or an empty string if the feature is disabled.</p>
+<p>This function was introduced in Qt 4.5.</p>
+<p>See also <a href="qwebsettings.html#setOfflineStoragePath">setOfflineStoragePath</a>().</p>
+<h3 class="fn"><a name="resetAttribute" />QWebSettings.resetAttribute (<i>self</i>, <a href="qwebsettings.html#WebAttribute-enum">WebAttribute</a>&#160;<i>attr</i>)</h3><p>Resets the setting of <i>attribute</i>. This function has no effect on the global <a href="qwebsettings.html">QWebSettings</a> instance.</p>
+<p>See also <a href="qwebsettings.html#globalSettings">globalSettings</a>().</p>
+<h3 class="fn"><a name="resetFontFamily" />QWebSettings.resetFontFamily (<i>self</i>, <a href="qwebsettings.html#FontFamily-enum">FontFamily</a>&#160;<i>which</i>)</h3><p>Resets the actual font family to the default font family, specified by <i>which</i>.</p>
+<p>This function has no effect on the global <a href="qwebsettings.html">QWebSettings</a> instance.</p>
+<h3 class="fn"><a name="resetFontSize" />QWebSettings.resetFontSize (<i>self</i>, <a href="qwebsettings.html#FontSize-enum">FontSize</a>&#160;<i>type</i>)</h3><p>Resets the font size for <i>type</i> to the size specified in the global settings object.</p>
+<p>This function has no effect on the global <a href="qwebsettings.html">QWebSettings</a> instance.</p>
+<h3 class="fn"><a name="setAttribute" />QWebSettings.setAttribute (<i>self</i>, <a href="qwebsettings.html#WebAttribute-enum">WebAttribute</a>&#160;<i>attr</i>, bool&#160;<i>on</i>)</h3><p>Enables or disables the specified <i>attribute</i> feature depending on the value of <i>on</i>.</p>
+<h3 class="fn"><a name="setFontFamily" />QWebSettings.setFontFamily (<i>self</i>, <a href="qwebsettings.html#FontFamily-enum">FontFamily</a>&#160;<i>which</i>, QString&#160;<i>family</i>)</h3><p>Sets the actual font family to <i>family</i> for the specified generic family, <i>which</i>.</p>
+<p>See also <a href="qwebsettings.html#fontFamily">fontFamily</a>().</p>
+<h3 class="fn"><a name="setFontSize" />QWebSettings.setFontSize (<i>self</i>, <a href="qwebsettings.html#FontSize-enum">FontSize</a>&#160;<i>type</i>, int&#160;<i>size</i>)</h3><p>Sets the font size for <i>type</i> to <i>size</i>.</p>
+<p>See also <a href="qwebsettings.html#fontSize">fontSize</a>().</p>
+<h3 class="fn"><a name="setIconDatabasePath" />QWebSettings.setIconDatabasePath (QString&#160;<i>location</i>)</h3><p>Sets the path of the icon database to <i>path</i>. The icon database is used to store "favicons" associated with web sites.</p>
+<p><i>path</i> must point to an existing directory where the icons are stored.</p>
+<p>Setting an empty path disables the icon database.</p>
+<p>See also <a href="qwebsettings.html#iconDatabasePath">iconDatabasePath</a>().</p>
+<h3 class="fn"><a name="setMaximumPagesInCache" />QWebSettings.setMaximumPagesInCache (int&#160;<i>pages</i>)</h3><p>Sets the maximum number of pages to hold in the memory cache to <i>pages</i>.</p>
+<p>See also <a href="qwebsettings.html#maximumPagesInCache">maximumPagesInCache</a>().</p>
+<h3 class="fn"><a name="setObjectCacheCapacities" />QWebSettings.setObjectCacheCapacities (int&#160;<i>cacheMinDeadCapacity</i>, int&#160;<i>cacheMaxDead</i>, int&#160;<i>totalCapacity</i>)</h3><p>Specifies the capacities for the memory cache for dead objects such as stylesheets or scripts.</p>
+<p>The <i>cacheMinDeadCapacity</i> specifies the <i>minimum</i> number of bytes that dead objects should consume when the cache is under pressure.</p>
+<p><i>cacheMaxDead</i> is the <i>maximum</i> number of bytes that dead objects should consume when the cache is <b>not</b> under pressure.</p>
+<p><i>totalCapacity</i> specifies the <i>maximum</i> number of bytes that the cache should consume <b>overall</b>.</p>
+<p>The cache is enabled by default. Calling setObjectCacheCapacities(0, 0, 0) will disable the cache. Calling it with one non-zero enables it again.</p>
+<h3 class="fn"><a name="setOfflineStorageDefaultQuota" />QWebSettings.setOfflineStorageDefaultQuota (long&#160;<i>maximumSize</i>)</h3><p>Sets the value of the default quota for new offline storage databases to <i>maximumSize</i>.</p>
+<p>This function was introduced in Qt 4.5.</p>
+<p>See also <a href="qwebsettings.html#offlineStorageDefaultQuota">offlineStorageDefaultQuota</a>().</p>
+<h3 class="fn"><a name="setOfflineStoragePath" />QWebSettings.setOfflineStoragePath (QString&#160;<i>path</i>)</h3><p>Sets the path for HTML5 offline storage to <i>path</i>.</p>
+<p><i>path</i> must point to an existing directory where the databases are stored.</p>
+<p>Setting an empty path disables the feature.</p>
+<p>This function was introduced in Qt 4.5.</p>
+<p>See also <a href="qwebsettings.html#offlineStoragePath">offlineStoragePath</a>().</p>
+<h3 class="fn"><a name="setUserStyleSheetUrl" />QWebSettings.setUserStyleSheetUrl (<i>self</i>, <a href="qurl.html">QUrl</a>&#160;<i>location</i>)</h3><p>Specifies the location of a user stylesheet to load with every web page.</p>
+<p>The <i>location</i> can be a URL or a path on the local filesystem.</p>
+<p>See also <a href="qwebsettings.html#userStyleSheetUrl">userStyleSheetUrl</a>().</p>
+<h3 class="fn"><a name="setWebGraphic" />QWebSettings.setWebGraphic (<a href="qwebsettings.html#WebGraphic-enum">WebGraphic</a>&#160;<i>type</i>, <a href="qpixmap.html">QPixmap</a>&#160;<i>graphic</i>)</h3><p>Sets <i>graphic</i> to be drawn when <a href="qtwebkit.html">QtWebKit</a> needs to draw an image of the given <i>type</i>.</p>
+<p>For example, when an image cannot be loaded the pixmap specified by <a href="qwebsettings.html#WebGraphic-enum">MissingImageGraphic</a> is drawn instead.</p>
+<p>See also <a href="qwebsettings.html#webGraphic">webGraphic</a>().</p>
+<h3 class="fn"><a name="testAttribute" />bool QWebSettings.testAttribute (<i>self</i>, <a href="qwebsettings.html#WebAttribute-enum">WebAttribute</a>&#160;<i>attr</i>)</h3><p>Returns true if <i>attribute</i> is enabled; otherwise returns false.</p>
+<h3 class="fn"><a name="userStyleSheetUrl" /><a href="qurl.html">QUrl</a> QWebSettings.userStyleSheetUrl (<i>self</i>)</h3><p>Returns the location of the user stylesheet.</p>
+<p>See also <a href="qwebsettings.html#setUserStyleSheetUrl">setUserStyleSheetUrl</a>().</p>
+<h3 class="fn"><a name="webGraphic" /><a href="qpixmap.html">QPixmap</a> QWebSettings.webGraphic (<a href="qwebsettings.html#WebGraphic-enum">WebGraphic</a>&#160;<i>type</i>)</h3><p>Returns a previously set pixmap used to draw replacement graphics of the specified <i>type</i>.</p>
+<p>For example, when an image cannot be loaded the pixmap specified by <a href="qwebsettings.html#WebGraphic-enum">MissingImageGraphic</a> is drawn instead.</p>
+<p>See also <a href="qwebsettings.html#setWebGraphic">setWebGraphic</a>().</p>
+<p /><address><hr /><div align="center"><table border="0" cellspacing="0" width="100%"><tr class="address"><td align="left" width="25%">PyQt&#160;4.6.2 for X11</td><td align="center" width="50%">Copyright &#169; <a href="http://www.riverbankcomputing.com">Riverbank&#160;Computing&#160;Ltd</a> and <a href="http://www.qtsoftware.com">Nokia</a> 2009</td><td align="right" width="25%">Qt&#160;4.5.3</td></tr></table></div></address></body></html>

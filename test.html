@@ -1,0 +1,94 @@
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">class</span> <span class="nc">Square</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;This is the abstraction of one Square&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">attrib</span><span class="p">,</span> <span class="n">root</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">attrib</span> <span class="o">=</span> <span class="n">attrib</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">root</span> <span class="o">=</span> <span class="n">root</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">rep</span> <span class="o">=</span> <span class="n">attrib</span>
+
+<span class="k">class</span> <span class="nc">Screen</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;The Screen Array of the game&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x_size</span><span class="p">,</span> <span class="n">y_size</span><span class="p">,</span> <span class="n">tokens</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x_size</span> <span class="o">=</span> <span class="n">x_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y_size</span> <span class="o">=</span> <span class="n">y_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tokens</span> <span class="o">=</span> <span class="n">tokens</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">childs</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">squares</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">populate</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">childs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">squares</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">childs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">rep</span> <span class="o">=</span> <span class="s">&#39;#&#39;</span>
+
+    <span class="k">def</span> <span class="nf">get_near_to</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">):</span>
+        <span class="n">vecinos</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">if</span> <span class="n">child</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">vecinos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_square</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">x</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">child</span><span class="o">.</span><span class="n">y</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">child</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="mi">1</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">vecinos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_square</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">child</span><span class="o">.</span><span class="n">y</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">child</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">x_size</span><span class="p">:</span>
+            <span class="n">vecinos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_square</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">child</span><span class="o">.</span><span class="n">y</span><span class="p">))</span>
+        <span class="k">if</span> <span class="n">child</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_size</span><span class="p">:</span>
+            <span class="n">vecinos</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_square</span><span class="p">(</span><span class="n">child</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">child</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+        
+        <span class="k">return</span> <span class="p">[</span><span class="n">vecino</span> <span class="k">for</span> <span class="n">vecino</span> <span class="ow">in</span> <span class="n">vecinos</span> <span class="k">if</span><span class="p">(</span><span class="ow">not</span> <span class="n">vecino</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">childs</span><span class="p">)]</span>
+
+
+    <span class="k">def</span> <span class="nf">get_square</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">squares</span><span class="p">[</span><span class="n">y</span><span class="p">][</span><span class="n">x</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">populate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_size</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">squares</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="bp">self</span><span class="o">.</span><span class="n">random_square</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x_size</span><span class="p">)])</span>
+
+    <span class="k">def</span> <span class="nf">random_square</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+        
+        <span class="n">attrib</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tokens</span><span class="p">)</span>
+        <span class="n">square</span> <span class="o">=</span> <span class="n">Square</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">attrib</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">square</span>
+    
+    <span class="k">def</span> <span class="nf">check_arround</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">child</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;We check the attrib of the near squares&quot;&quot;&quot;</span>
+        <span class="n">vecinos</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_near_to</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">vecinos</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">vecino</span> <span class="ow">in</span> <span class="n">vecinos</span><span class="p">:</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">vecino</span><span class="o">.</span><span class="n">attrib</span> <span class="o">==</span> <span class="n">child</span><span class="o">.</span><span class="n">attrib</span><span class="p">):</span>
+                    <span class="n">vecino</span><span class="o">.</span><span class="n">rep</span> <span class="o">=</span> <span class="s">&#39;#&#39;</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">childs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vecino</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">squares</span><span class="p">:</span>
+            <span class="n">output</span> <span class="o">+=</span> <span class="s">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s">&#39;</span><span class="si">%s</span><span class="s"> &#39;</span> <span class="o">%</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">rep</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">row</span><span class="p">])</span>
+            <span class="n">output</span> <span class="o">+=</span> <span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span>
+        <span class="k">return</span> <span class="n">output</span>
+    
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">attrib</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">childs</span><span class="p">:</span>
+            <span class="n">child</span><span class="o">.</span><span class="n">attrib</span> <span class="o">=</span> <span class="n">attrib</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">check_arround</span><span class="p">(</span><span class="n">child</span><span class="p">)</span>
+            
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">screen</span> <span class="o">=</span> <span class="n">Screen</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="p">[</span><span class="s">&#39;1&#39;</span><span class="p">,</span> <span class="s">&#39;2&#39;</span><span class="p">,</span> <span class="s">&#39;3&#39;</span><span class="p">,</span> <span class="s">&#39;4&#39;</span><span class="p">,</span> <span class="s">&#39;5&#39;</span><span class="p">])</span>
+    <span class="k">print</span> <span class="n">screen</span>
+    <span class="n">screen</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">screen</span><span class="o">.</span><span class="n">childs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">attrib</span><span class="p">)</span> <span class="c">#dirty Hack</span>
+    <span class="n">limit</span> <span class="o">=</span> <span class="mi">18</span> 
+    <span class="n">win</span> <span class="o">=</span> <span class="bp">False</span>
+    <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">limit</span><span class="p">):</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&#39;_ &#39;</span><span class="p">)</span>
+        <span class="n">screen</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s">&#39;clear&#39;</span><span class="p">)</span>
+        <span class="k">print</span> <span class="n">screen</span>
+        <span class="k">print</span> <span class="s">&quot;</span><span class="si">%4d</span><span class="s"> moves of </span><span class="si">%4d</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">limit</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">screen</span><span class="o">.</span><span class="n">childs</span><span class="p">)</span> <span class="o">==</span> <span class="n">screen</span><span class="o">.</span><span class="n">x_size</span><span class="o">*</span><span class="n">screen</span><span class="o">.</span><span class="n">y_size</span><span class="p">:</span>
+            <span class="n">win</span> <span class="o">=</span> <span class="bp">True</span>
+            <span class="k">break</span>
+    <span class="k">if</span> <span class="n">win</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">&quot;You Win&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">&quot;You loose&quot;</span>
+</pre></div>

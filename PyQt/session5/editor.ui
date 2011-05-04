@@ -1,0 +1,146 @@
+<ui version="4.0" >
+ <class>Form</class>
+ <widget class="QWidget" name="Form" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>345</width>
+    <height>270</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" >
+   <item>
+    <layout class="QFormLayout" name="formLayout" >
+     <item row="0" column="0" >
+      <widget class="QLabel" name="label" >
+       <property name="text" >
+        <string>&amp;Task:</string>
+       </property>
+       <property name="buddy" >
+        <cstring>task</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" >
+      <widget class="QLineEdit" name="task" />
+     </item>
+     <item row="1" column="1" >
+      <widget class="QCheckBox" name="done" >
+       <property name="text" >
+        <string>&amp;Finished</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" >
+      <widget class="QLabel" name="label_2" >
+       <property name="text" >
+        <string>&amp;Due Date:</string>
+       </property>
+       <property name="buddy" >
+        <cstring>dateTime</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1" >
+      <widget class="QDateTimeEdit" name="dateTime" >
+       <property name="calendarPopup" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" >
+      <widget class="QLabel" name="label_3" >
+       <property name="text" >
+        <string>T&amp;ags:</string>
+       </property>
+       <property name="buddy" >
+        <cstring>tags</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1" >
+      <widget class="QLineEdit" name="tags" />
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>task</tabstop>
+  <tabstop>done</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>dateTime</sender>
+   <signal>dateTimeChanged(QDateTime)</signal>
+   <receiver>Form</receiver>
+   <slot>save()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>136</x>
+     <y>78</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>172</x>
+     <y>134</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>done</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>Form</receiver>
+   <slot>save()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>103</x>
+     <y>49</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>172</x>
+     <y>134</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>task</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Form</receiver>
+   <slot>save()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>202</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>172</x>
+     <y>134</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tags</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>Form</receiver>
+   <slot>save()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>202</x>
+     <y>110</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>172</x>
+     <y>134</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>save()</slot>
+ </slots>
+</ui>

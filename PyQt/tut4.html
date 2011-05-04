@@ -1,0 +1,1271 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.5: http://docutils.sourceforge.net/" />
+<title>PyQt By Example: Session 4</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger
+:Contact: goodger@users.sourceforge.net
+:Date: $Date: 2008/01/29 22:14:02 $
+:Revision: $Revision: 1.1.1.1 $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em ;
+  text-align: center;
+  max-width: 90%;
+  }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin-left: 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left {
+  clear: left }
+
+img.align-right {
+  clear: right }
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font-family: serif ;
+  font-size: 100% }
+
+pre.literal-block, pre.doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em ;
+  background-color: #eeeeee }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+/*
+tt.docutils {
+  background-color: #eeeeee }
+*/
+
+ul.auto-toc {
+  list-style-type: none }
+
+
+/* diff2html style */
+TD.linenum { color: #909090; 
+             text-align: right;
+             vertical-align: top;
+             font-weight: bold;
+             border-right: 1px solid black;
+             border-left: 1px solid black; }
+TD.added { background-color: #DDDDFF; }
+TD.modified { background-color: #BBFFBB; }
+TD.removed { background-color: #FFCCCC; }
+TD.normal { background-color: #FFFFE1; }
+
+
+</style>
+</head>
+<body>
+<div class="document" id="pyqt-by-example-session-4">
+<h1 class="title">PyQt By Example: Session 4</h1>
+<h2 class="subtitle" id="action">Action!</h2>
+
+<div class="section" id="requirements">
+<h1>Requirements</h1>
+<p>If you have not done it yet, please check the previous sessions:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://lateral.netmanagers.com.ar/stories/BBS47.html">Session 1</a></li>
+<li><a class="reference external" href="http://lateral.netmanagers.com.ar/stories/BBS48.html">Session 2</a></li>
+<li><a class="reference external" href="http://lateral.netmanagers.com.ar/stories/BBS49.html">Session 3</a></li>
+</ul>
+<p>All files for this session are here: <a class="reference external" href="http://github.com/ralsina/pyqt-by-example/tree/master/session4">Session 4 at GitHub</a>. You can use them, or you can follow these instructions starting with the files from <a class="reference external" href="http://lateral.netmanagers.com.ar/stories/BBS49.html">Session 3</a> and see how well you worked!</p>
+</div>
+<div class="section" id="id1">
+<h1>Action!</h1>
+<div class="section" id="what-s-an-action">
+<h2>What's an Action?</h2>
+<p>When we finished <a class="reference external" href="http://lateral.netmanagers.com.ar/stories/BBS49.html">session 3</a> we had a basic todo application, with very limited functionality: you can mark  tasks as done, but you can't edit them, you can't create new ones, and you can't remove them, much less do things like filtering them.</p>
+<div class="figure">
+<img alt="window5.png" src="window5.png" />
+<p class="caption">A very limited application</p>
+</div>
+<p>Today we will start writing code and designing UI to do those things.</p>
+<p>The key concept here is Actions.</p>
+<ul class="simple">
+<li>Help? That's an action</li>
+<li>Open File? That's an action</li>
+<li>Cut / Copy / Paste? Those are actions too.</li>
+</ul>
+<p>Let's quote The Fine Manual:</p>
+<blockquote>
+<p>The QAction class provides an abstract user interface action that can be inserted into widgets.</p>
+<p>In applications many common commands can be invoked via menus, tool bar buttons, and keyboard shortcuts. Since the user expects each command to be performed in the same way, regardless of the user interface used, it is useful to represent each command as an action.</p>
+<p>Actions can be added to menus and tool bars, and will automatically keep them in sync. For example, in a word processor, if the user presses a Bold tool bar button, the Bold menu item will automatically be checked.</p>
+<p>A QAction may contain an icon, menu text, a shortcut, status text, &quot;What's This?&quot; text, and a tooltip.</p>
+</blockquote>
+<p>The beauty of actions is that you don't have to code things twice. Why add a &quot;Copy&quot; button to a tool bar, then a &quot;Copy&quot; menu entry, then write two handlers?</p>
+<p>Create actions for <em>everything the user can do</em> then plug them in your UI in the right places. If you put them in a menu, it's a menu entry. If you put it in a tool bar, it's a button. Then write a handler <em>for the action</em>, connect it to the right signal, and you are done.</p>
+<p>Let's start with a simple action: <strong>Remove Task</strong>. We will be doing the first half of the job, creating the action itself and the UI, using designer.</p>
+</div>
+<div class="section" id="creating-actions-in-designer">
+<h2>Creating Actions in Designer</h2>
+<p>First, let's go to the <em>Action Editor</em> and obviously click on the &quot;New Action&quot; button and start creating it:</p>
+<div class="figure">
+<img alt="action1.png" src="action1.png" />
+<p class="caption">Creating a New Action</p>
+</div>
+<p>A few remarks:</p>
+<ul class="simple">
+<li>If you don't know where the &quot;X&quot; icon came from, you have not read <a class="reference external" href="http://lateral.netmanagers.com.ar/stories/BBS49.html">session 3</a> ;-)</li>
+<li>The <tt class="docutils literal"><span class="pre">actionDelete_Task</span></tt> object name is automatically generated from the text field. In some cases that can lead to awful names. If that's the case, you can just change the object name.</li>
+<li>The same text is used for the iconText and toolTip properties. If that's not correct, you can change it later.</li>
+</ul>
+<p>Once you create the action, it will not be marked as &quot;Used&quot; in the action editor. That's because it exists, but has not been made available to the user anywhere in the window we are creating.</p>
+<p>There are two obvious places for this action: a tool bar, and a menu bar.</p>
+</div>
+<div class="section" id="adding-actions-to-a-tool-bar">
+<h2>Adding Actions to a Tool Bar</h2>
+<p>To add an action to a tool bar, first make sure there is one. If you don't have one in your &quot;Object Inspector&quot;, then right click on MainWindow (either the actual window, or its entry in the inspector), and choose &quot;Add Tool Bar&quot;.</p>
+<p>You can add as many tool bars as you want, but try to want only one, unless you have a <strong>very</strong> good reason (we will have one in session 5 ;-)</p>
+<p>After you create the tool bar, you will see empty space between the menu bar (that says &quot;Type Here&quot;) and the task list widget. That space is the tool bar.</p>
+<p>Drag your action's icon from the action editor to the tool bar.</p>
+<p>That's it!</p>
+<div class="figure">
+<img alt="action2.png" src="action2.png" />
+<p class="caption">The Delete Task action is now in the tool bar.</p>
+</div>
+</div>
+<div class="section" id="adding-actions-to-a-menu-bar">
+<h2>Adding Actions to a Menu Bar</h2>
+<p>Again, our menu bar is empty, it has only a sign saying &quot;Type Here&quot;. While we could just drag our action to the menu bar, that would place &quot;Delete Task&quot; as a top level menu, which is really an unusual choice.</p>
+<p>So, let's create a &quot;Task&quot; menu first:</p>
+<ul class="simple">
+<li>Click on the &quot;Type Here&quot;.</li>
+<li>Type &quot;Task&quot; (without the quotes)</li>
+</ul>
+<div class="figure">
+<img alt="action3.png" src="action3.png" />
+<p class="caption">Creating a menu</p>
+</div>
+<p>If you see the last image, by doing that we created a QMenu object called menuTask (again, the object name is based on what we typed).</p>
+<p>We want to add the delete task action to that menu. To do that, drag the action to the &quot;Task&quot; in the menu bar, then to the menu that appears when you do that.</p>
+<div class="figure">
+<img alt="action4.png" src="action4.png" />
+<p class="caption">The Delete Task action is now in the menu bar</p>
+</div>
+<p>Now we have our action in the tool bar and in the menu bar. But of course, it does nothing. So, let's work on that next.</p>
+<p>Save it, run <tt class="docutils literal"><span class="pre">build.sh</span></tt>, let's move forward.</p>
+<div class="section" id="deleting-a-task">
+<h3>Deleting a Task</h3>
+<p>From <a class="reference external" href="http://lateral.netmanagers.com.ar/stories/BBS48.html">session 2</a> you should remember AutoConnect. If you don't, refresh that session, because that's what we will use now. We want to do something when the <tt class="docutils literal"><span class="pre">actionDelete_Task</span></tt> object emits its <a class="reference external" href="http://doc.trolltech.com/4.4/qaction.html#triggered">triggered</a> signal.</p>
+<p>Therefore, we want to implement <tt class="docutils literal"><span class="pre">Main.on_actionDelete_Task_triggered</span></tt> (see why action's object names are important? I could have called it <tt class="docutils literal"><span class="pre">delete</span></tt> instead).</p>
+<div class="admonition-an-important-issue admonition">
+<p class="first admonition-title">An Important Issue</p>
+<p>Here we take a small detour because there is a problem with PyQt which is mildly annoying.</p>
+<p>Consider this trivial version of our method:</p>
+<div class="highlight"><pre><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">on_actionDelete_Task_triggered</span>(<span style="color: #008000">self</span>,checked<span style="color: #666666">=</span><span style="color: #008000">None</span>):
+    <span style="color: #008000; font-weight: bold">print</span> <span style="color: #BA2121">&quot;adtt&quot;</span>,checked
+</pre></div>
+<p>What's printed if I click on the toolbar button?</p>
+<pre class="literal-block">
+[ralsina&#64;hp session4]$ python main.py
+adtt False
+adtt None
+</pre>
+<p>The same thing happens if you select &quot;Delete Task&quot; from the menu: our slot gets called <strong>twice</strong>.
+This problem is there when you use AutoConnect for signals with arguments that can also be emitted without arguments.</p>
+<p>How can you tell if that's the case? In the Qt docs they will be listed with default arguments.</p>
+<p>For example, this signal has the problem:</p>
+<pre class="literal-block">
+void triggered ( bool checked = false )
+</pre>
+<p>This one doesn't:</p>
+<pre class="literal-block">
+void toggled ( bool checked )
+</pre>
+<p>The technical explanation for this is ... <a class="reference external" href="http://docs.huihoo.com/pyqt/pyqt4.html#the-qtcore-pyqtsignature-decorator">involved</a> but the <em>practical</em> solution is trivial:</p>
+<p>Make sure checked is not None in your slot:</p>
+<div class="highlight"><pre><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">on_actionDelete_Task_triggered</span>(<span style="color: #008000">self</span>,checked<span style="color: #666666">=</span><span style="color: #008000">None</span>):
+    <span style="color: #008000; font-weight: bold">if</span> checked <span style="color: #AA22FF; font-weight: bold">is</span> <span style="color: #008000">None</span>: <span style="color: #008000; font-weight: bold">return</span>
+</pre></div>
+<p class="last">This way, you will ignore the slot called with no arguments, and run the real code only once.</p>
+</div>
+<p>And here is the real code, which is quite short:</p>
+<div class="highlight"><pre><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">on_actionDelete_Task_triggered</span>(<span style="color: #008000">self</span>,checked<span style="color: #666666">=</span><span style="color: #008000">None</span>):
+    <span style="color: #008000; font-weight: bold">if</span> checked <span style="color: #AA22FF; font-weight: bold">is</span> <span style="color: #008000">None</span>: <span style="color: #008000; font-weight: bold">return</span>
+    <span style="color: #408080; font-style: italic"># First see what task is &quot;current&quot;.</span>
+    item<span style="color: #666666">=</span><span style="color: #008000">self</span><span style="color: #666666">.</span>ui<span style="color: #666666">.</span>list<span style="color: #666666">.</span>currentItem()
+
+    <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> item: <span style="color: #408080; font-style: italic"># None selected, so we don&#39;t know what to delete!</span>
+        <span style="color: #008000; font-weight: bold">return</span>
+    <span style="color: #408080; font-style: italic"># Actually delete the task</span>
+    item<span style="color: #666666">.</span>task<span style="color: #666666">.</span>delete()
+    todo<span style="color: #666666">.</span>saveData()
+
+    <span style="color: #408080; font-style: italic"># And remove the item. I think that&#39;s not pretty. Is it the only way?</span>
+    <span style="color: #008000">self</span><span style="color: #666666">.</span>ui<span style="color: #666666">.</span>list<span style="color: #666666">.</span>takeTopLevelItem(<span style="color: #008000">self</span><span style="color: #666666">.</span>ui<span style="color: #666666">.</span>list<span style="color: #666666">.</span>indexOfTopLevelItem(item))
+</pre></div>
+<p>Except for the last line, that code should be obvious. The last line? I am not really
+sure it's even <em>right</em> but it works.</p>
+<p>You can now test the feature. Remember that if you run out of tasks, you can execute <tt class="docutils literal"><span class="pre">python</span> <span class="pre">todo.py</span></tt> and get new ones.</p>
+</div>
+<div class="section" id="fine-tuning-your-actions">
+<h3>Fine Tuning Your Actions</h3>
+<p>There are some interface problems with our work so far:</p>
+<ol class="arabic">
+<li><p class="first">The Task menu and the Delete Task action lack keyboard shortcuts.</p>
+<p>This is very important. It makes the app work better for the regular user. Besides, often they will <em>expect</em> the shortcuts to be there and there is no reason to frustrate your user!</p>
+<p>Luckily, this is trivial to fix, just set the shortcut property for action_Delete_Task, and change menuTask's text property to &quot;&amp;Task&quot;.</p>
+</li>
+<li><p class="first">The Delete Task action is enabled even when it doesn't apply. If you have no task selected, the user can trigger it, but it does <em>nothing</em>. That's a bit surprising, and surprising your users is not very nice, IMHO.</p>
+<p>There is some argument about this, notably from <a class="reference external" href="http://www.joelonsoftware.com/items/2008/07/01.html">Joel Spolsky</a> so maybe I am just old fashioned!</p>
+<p>To selectively enable or disable your actions when there is/isn't a selected item in our task list, we need to react to our list's <tt class="docutils literal"><span class="pre">currentItemChanged</span></tt> signal. Here's the code:</p>
+<div class="highlight"><pre><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">on_list_currentItemChanged</span>(<span style="color: #008000">self</span>,current<span style="color: #666666">=</span><span style="color: #008000">None</span>,previous<span style="color: #666666">=</span><span style="color: #008000">None</span>):
+    <span style="color: #008000; font-weight: bold">if</span> current:
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>ui<span style="color: #666666">.</span>actionDelete_Task<span style="color: #666666">.</span>setEnabled(<span style="color: #008000">True</span>)
+    <span style="color: #008000; font-weight: bold">else</span>:
+        <span style="color: #008000">self</span><span style="color: #666666">.</span>ui<span style="color: #666666">.</span>actionDelete_Task<span style="color: #666666">.</span>setEnabled(<span style="color: #008000">False</span>)
+</pre></div>
+<p>Also, we need to make Delete Task start <em>disabled</em> because we start the app with no task selected. That's done from designer using its &quot;enabled&quot; property.</p>
+<p>Since there is only one Delete Task action, this code affects the task bar and also the menu bar. That helps keep your UI consistent and well-behaved.</p>
+</li>
+</ol>
+<div class="figure">
+<img alt="window6.png" src="window6.png" />
+<p class="caption">A very limited application</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="coming-soon">
+<h1>Coming Soon</h1>
+<p>Well, that was a rather long explanation for a small feature, wasn't it? Don't worry, the next actions will be much easier to add, because I expect you to read &quot;I added an action called <em>New Task</em>&quot; and know what I am talking about.</p>
+<p>And in the next session, we will do just that. And we will create our first dialog.</p>
+</div>
+<div class="section" id="further-reading">
+<h1>Further Reading</h1>
+<ul class="simple">
+<li>PyQt's Actions: <a class="reference external" href="http://www.riverbankcomputing.co.uk/static/Docs/PyQt4/html/qaction.html">1</a> <a class="reference external" href="http://www.riverbankcomputing.co.uk/static/Docs/PyQt4/html/qactiongroup.html#details">2</a></li>
+<li><a class="reference external" href="http://msdn.microsoft.com/en-us/library/aa511500.aspx">Toolbar Design</a></li>
+<li><a class="reference external" href="http://developer.apple.com/documentation/userexperience/conceptual/applehiguidelines/XHIGIcons/chapter_15_section_9.html">More Toolbar Design</a></li>
+</ul>
+<hr class="docutils" />
+<p>Here you can see what changed between the old and new versions:</p>
+<table>
+<tr><td width="50%">
+<table>
+    <tr>
+        <td class="modified">Modified lines:&nbsp;</td>
+        <td class="modified">None</td>
+    </tr>
+    <tr>
+        <td class="added">Added line:&nbsp;</td>
+        <td class="added"><a href="#F2_44">44</a>, <a href="#F2_45">45</a>, <a href="#F2_46">46</a>, <a href="#F2_47">47</a>, <a href="#F2_48">48</a>, <a href="#F2_49">49</a>, <a href="#F2_50">50</a>, <a href="#F2_51">51</a>, <a href="#F2_52">52</a>, <a href="#F2_53">53</a>, <a href="#F2_54">54</a>, <a href="#F2_55">55</a>, <a href="#F2_56">56</a>, <a href="#F2_57">57</a>, <a href="#F2_58">58</a>, <a href="#F2_59">59</a>, <a href="#F2_60">60</a>, <a href="#F2_61">61</a>, <a href="#F2_62">62</a></td>
+    </tr>
+    <tr>
+        <td class="removed">Removed line:&nbsp;</td>
+        <td class="removed">None</td>
+    </tr>
+</table>
+</td>
+<td width="50%">
+<i>Generated by <a href="http://diff2html.tuxfamily.org"><b>diff2html</b></a><br/>
+&copy; Yves Bailly, MandrakeSoft S.A. 2001<br/>
+<b>diff2html</b> is licensed under the <a 
+href="http://www.gnu.org/copyleft/gpl.html">GNU GPL</a>.</i>
+</td></tr>
+</table>
+<hr/>
+<table>
+    <tr>
+        <th>&nbsp;</th>
+        <th width="45%"><strong><big>session3/main.py</big></strong></th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+        <th width="45%"><strong><big>session4/main.py</big></strong></th>
+    </tr>
+    <tr>
+        <td width="16">&nbsp;</td>
+        <td>
+        60 lines<br/>
+        1557 bytes<br/>
+        Last modified : Thu Mar  5 02:03:34 2009<br/>
+        <hr/>
+        </td>
+        <td width="16">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td>
+        79 lines<br/>
+        2300 bytes<br/>
+        Last modified : Sat Mar  7 02:06:29 2009<br/>
+        <hr/>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">1</td>
+        <td class="normal"># -*- coding: utf-8 -*-</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">1</td>
+        <td class="normal"># -*- coding: utf-8 -*-</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">2</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">2</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">3</td>
+        <td class="normal">"""The user interface for our app"""</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">3</td>
+        <td class="normal">"""The user interface for our app"""</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">4</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">4</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">5</td>
+        <td class="normal">import os,sys</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">5</td>
+        <td class="normal">import os,sys</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">6</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">6</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">7</td>
+        <td class="normal"># Import Qt modules</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">7</td>
+        <td class="normal"># Import Qt modules</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">8</td>
+        <td class="normal">from PyQt4 import QtCore,QtGui</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">8</td>
+        <td class="normal">from PyQt4 import QtCore,QtGui</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">9</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">9</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">10</td>
+        <td class="normal"># Import the compiled UI module</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">10</td>
+        <td class="normal"># Import the compiled UI module</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">11</td>
+        <td class="normal">from windowUi import Ui_MainWindow</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">11</td>
+        <td class="normal">from windowUi import Ui_MainWindow</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">12</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">12</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">13</td>
+        <td class="normal"># Import our backend</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">13</td>
+        <td class="normal"># Import our backend</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">14</td>
+        <td class="normal">import todo</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">14</td>
+        <td class="normal">import todo</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">15</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">15</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">16</td>
+        <td class="normal"># Create a class for our main window</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">16</td>
+        <td class="normal"># Create a class for our main window</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">17</td>
+        <td class="normal">class Main(QtGui.QMainWindow):</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">17</td>
+        <td class="normal">class Main(QtGui.QMainWindow):</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">18</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self):</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">18</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;def __init__(self):</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">19</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QtGui.QMainWindow.__init__(self)</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">19</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;QtGui.QMainWindow.__init__(self)</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">20</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">20</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">21</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# This is always the same</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">21</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# This is always the same</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">22</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.ui=Ui_MainWindow()</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">22</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.ui=Ui_MainWindow()</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">23</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.ui.setupUi(self)</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">23</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.ui.setupUi(self)</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">24</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">24</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">25</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Let's do something interesting: load the database contents</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">25</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Let's do something interesting: load the database contents</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">26</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# into our task list widget</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">26</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# into our task list widget</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">27</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for task in todo.Task.query().all():</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">27</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for task in todo.Task.query().all():</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">28</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tags=','.join([t.name for t in task.tags])</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">28</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tags=','.join([t.name for t in task.tags])</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">29</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item=QtGui.QTreeWidgetItem([task.text,str(task.date),tags])</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">29</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item=QtGui.QTreeWidgetItem([task.text,str(task.date),tags])</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">30</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.task=task</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">30</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.task=task</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">31</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if task.done:</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">31</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if task.done:</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">32</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.setCheckState(0,QtCore.Qt.Checked)</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">32</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.setCheckState(0,QtCore.Qt.Checked)</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">33</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">33</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">34</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.setCheckState(0,QtCore.Qt.Unchecked)</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">34</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.setCheckState(0,QtCore.Qt.Unchecked)</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">35</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.ui.list.addTopLevelItem(item)</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">35</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.ui.list.addTopLevelItem(item)</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">36</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">36</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">37</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;def on_list_itemChanged(self,item,column):</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">37</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;def on_list_itemChanged(self,item,column):</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">38</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if item.checkState(0):</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">38</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if item.checkState(0):</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">39</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.task.done=True</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">39</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.task.done=True</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">40</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">40</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">41</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.task.done=False</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">41</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.task.done=False</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">42</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;todo.saveData()</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">42</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;todo.saveData()</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">43</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">43</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_44">44</a></td>
+        <td class="added">&nbsp;&nbsp;&nbsp;&nbsp;def on_actionDelete_Task_triggered(self,checked=None):</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_45">45</a></td>
+        <td class="added">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if checked is None: return</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_46">46</a></td>
+        <td class="added">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# First see what task is "current".</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_47">47</a></td>
+        <td class="added">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item=self.ui.list.currentItem()</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_48">48</a></td>
+        <td class="added"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_49">49</a></td>
+        <td class="added">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if not item: # None selected, so we don't know what to delete!</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_50">50</a></td>
+        <td class="added">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_51">51</a></td>
+        <td class="added">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Actually delete the task</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_52">52</a></td>
+        <td class="added">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item.task.delete()</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_53">53</a></td>
+        <td class="added">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;todo.saveData()</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_54">54</a></td>
+        <td class="added"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_55">55</a></td>
+        <td class="added">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# And remove the item. I think that's not pretty. Is it the only way?</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_56">56</a></td>
+        <td class="added">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.ui.list.takeTopLevelItem(self.ui.list.indexOfTopLevelItem(item))</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_57">57</a></td>
+        <td class="added"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_58">58</a></td>
+        <td class="added">&nbsp;&nbsp;&nbsp;&nbsp;def on_list_currentItemChanged(self,current=None,previous=None):</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_59">59</a></td>
+        <td class="added">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if current:</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_60">60</a></td>
+        <td class="added">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.ui.actionDelete_Task.setEnabled(True)</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_61">61</a></td>
+        <td class="added">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">&nbsp;</td>
+        <td class="added">&nbsp;</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum"><a name="F2_62">62</a></td>
+        <td class="added">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;self.ui.actionDelete_Task.setEnabled(False)</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">44</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">63</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">45</td>
+        <td class="normal">def main():</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">64</td>
+        <td class="normal">def main():</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">46</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;# Init the database before doing anything else</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">65</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;# Init the database before doing anything else</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">47</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;todo.initDB()</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">66</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;todo.initDB()</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">48</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">67</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">49</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;# Again, this is boilerplate, it's going to be the same on</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">68</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;# Again, this is boilerplate, it's going to be the same on</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">50</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;# almost every app you write</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">69</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;# almost every app you write</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">51</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;app = QtGui.QApplication(sys.argv)</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">70</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;app = QtGui.QApplication(sys.argv)</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">52</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;window=Main()</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">71</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;window=Main()</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">53</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;window.show()</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">72</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;window.show()</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">54</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;# It's exec_ because exec is a reserved word in Python</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">73</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;# It's exec_ because exec is a reserved word in Python</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">55</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;sys.exit(app.exec_())</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">74</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;sys.exit(app.exec_())</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">56</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">75</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">57</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">76</td>
+        <td class="normal"></td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">58</td>
+        <td class="normal">if __name__ == "__main__":</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">77</td>
+        <td class="normal">if __name__ == "__main__":</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">59</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;main()</td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">78</td>
+        <td class="normal">&nbsp;&nbsp;&nbsp;&nbsp;main()</td>
+    </tr>
+
+
+    <tr>
+        <td class="linenum">60</td>
+        <td class="normal"></td>
+        <td width="16">&nbsp;</td>
+        <td class="linenum">79</td>
+        <td class="normal"></td>
+    </tr>
+
+
+</table>
+<hr/>
+<i>Generated by <b>diff2html</b> on Sat Mar  7 02:08:22 2009<br/>
+Command-line:</i> <tt>/home/ralsina/bin/diff2html session3/main.py session4/main.py</tt>
+
+</body>
+</html>
+
+</div>
+</div>
+</body>
+</html>

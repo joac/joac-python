@@ -1,0 +1,1216 @@
+%PDF-1.3
+%“Œ‹ž ReportLab Generated PDF document http://www.reportlab.com
+% 'BasicFonts': class PDFDictionary 
+1 0 obj
+% The standard fonts dictionary
+<< /F1 2 0 R
+ /F2 3 0 R
+ /F3 10 0 R
+ /F4 11 0 R
+ /F5 13 0 R
+ /F6 14 0 R >>
+endobj
+% 'F1': class PDFType1Font 
+2 0 obj
+% Font Helvetica
+<< /BaseFont /Helvetica
+ /Encoding /WinAnsiEncoding
+ /Name /F1
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F2': class PDFType1Font 
+3 0 obj
+% Font Helvetica-Bold
+<< /BaseFont /Helvetica-Bold
+ /Encoding /WinAnsiEncoding
+ /Name /F2
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'Annot.NUMBER1': class PDFDictionary 
+4 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (mailto:soriasoft@gmail.com) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 245.1723
+ 244.3889
+ 338.6723
+ 256.3889 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Annot.NUMBER2': class PDFDictionary 
+5 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (http://www.joaclandia.com.ar) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 153.7323
+ 214.3889
+ 413.1969
+ 226.3889 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Page1': class PDFPage 
+6 0 obj
+% Page dictionary
+<< /Annots [ 4 0 R
+ 5 0 R ]
+ /Contents 28 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 340.1575 ]
+ /Parent 27 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Annot.NUMBER3': class PDFDictionary 
+7 0 obj
+<< /A << /S /URI
+ /Type /Action
+ /URI (http://pyserial.sourceforge.net/) >>
+ /Border [ 0
+ 0
+ 0 ]
+ /Rect [ 153.7323
+ 269.3889
+ 413.1969
+ 281.3889 ]
+ /Subtype /Link
+ /Type /Annot >>
+endobj
+% 'Page2': class PDFPage 
+8 0 obj
+% Page dictionary
+<< /Annots [ 7 0 R ]
+ /Contents 29 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 340.1575 ]
+ /Parent 27 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page3': class PDFPage 
+9 0 obj
+% Page dictionary
+<< /Contents 30 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 340.1575 ]
+ /Parent 27 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'F3': class PDFType1Font 
+10 0 obj
+% Font Helvetica-BoldOblique
+<< /BaseFont /Helvetica-BoldOblique
+ /Encoding /WinAnsiEncoding
+ /Name /F3
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F4': class PDFType1Font 
+11 0 obj
+% Font Courier
+<< /BaseFont /Courier
+ /Encoding /WinAnsiEncoding
+ /Name /F4
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'Page4': class PDFPage 
+12 0 obj
+% Page dictionary
+<< /Contents 31 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 340.1575 ]
+ /Parent 27 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'F5': class PDFType1Font 
+13 0 obj
+% Font Courier-Oblique
+<< /BaseFont /Courier-Oblique
+ /Encoding /WinAnsiEncoding
+ /Name /F5
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'F6': class PDFType1Font 
+14 0 obj
+% Font Courier-Bold
+<< /BaseFont /Courier-Bold
+ /Encoding /WinAnsiEncoding
+ /Name /F6
+ /Subtype /Type1
+ /Type /Font >>
+endobj
+% 'Page5': class PDFPage 
+15 0 obj
+% Page dictionary
+<< /Contents 32 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 340.1575 ]
+ /Parent 27 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'Page6': class PDFPage 
+16 0 obj
+% Page dictionary
+<< /Contents 33 0 R
+ /MediaBox [ 0
+ 0
+ 453.5433
+ 340.1575 ]
+ /Parent 27 0 R
+ /Resources << /Font 1 0 R
+ /ProcSet [ /PDF
+ /Text
+ /ImageB
+ /ImageC
+ /ImageI ] >>
+ /Rotate 0
+ /Trans <<  >>
+ /Type /Page >>
+endobj
+% 'R17': class PDFCatalog 
+17 0 obj
+% Document Root
+<< /Outlines 19 0 R
+ /PageLabels 34 0 R
+ /PageMode /UseNone
+ /Pages 27 0 R
+ /Type /Catalog >>
+endobj
+% 'R18': class PDFInfo 
+18 0 obj
+<< /Author ()
+ /CreationDate (D:20101103125207+03'00')
+ /Keywords ()
+ /Producer (ReportLab http://www.reportlab.com)
+ /Subject (\(unspecified\))
+ /Title (Monitoreo y Control Industrial Usando Python) >>
+endobj
+% 'R19': class PDFOutlines 
+19 0 obj
+<< /Count 9
+ /First 20 0 R
+ /Last 20 0 R
+ /Type /Outlines >>
+endobj
+% 'Outline.0': class OutlineEntryObject 
+20 0 obj
+<< /Count 6
+ /Dest [ 8 0 R
+ /XYZ
+ 62.69291
+ 310.8189
+ 0 ]
+ /First 21 0 R
+ /Last 24 0 R
+ /Parent 19 0 R
+ /Title (PySerial) >>
+endobj
+% 'Outline.8.0': class OutlineEntryObject 
+21 0 obj
+<< /Dest [ 8 0 R
+ /XYZ
+ 62.69291
+ 220.8189
+ 0 ]
+ /Next 22 0 R
+ /Parent 20 0 R
+ /Title (Dispositivos) >>
+endobj
+% 'Outline.8.1': class OutlineEntryObject 
+22 0 obj
+<< /Dest [ 9 0 R
+ /XYZ
+ 62.69291
+ 310.8189
+ 0 ]
+ /Next 23 0 R
+ /Parent 20 0 R
+ /Prev 21 0 R
+ /Title (Ventajas) >>
+endobj
+% 'Outline.8.2': class OutlineEntryObject 
+23 0 obj
+<< /Dest [ 9 0 R
+ /XYZ
+ 62.69291
+ 202.8189
+ 0 ]
+ /Next 24 0 R
+ /Parent 20 0 R
+ /Prev 22 0 R
+ /Title (Desventajas) >>
+endobj
+% 'Outline.8.3': class OutlineEntryObject 
+24 0 obj
+<< /Count 2
+ /Dest [ 12 0 R
+ /XYZ
+ 62.69291
+ 310.8189
+ 0 ]
+ /First 25 0 R
+ /Last 26 0 R
+ /Parent 20 0 R
+ /Prev 23 0 R
+ /Title (Lectura de Peso de una balanza NC3M) >>
+endobj
+% 'Outline.9.0': class OutlineEntryObject 
+25 0 obj
+<< /Dest [ 12 0 R
+ /XYZ
+ 62.69291
+ 250.8189
+ 0 ]
+ /Next 26 0 R
+ /Parent 24 0 R
+ /Title (Formato del Dato) >>
+endobj
+% 'Outline.9.1': class OutlineEntryObject 
+26 0 obj
+<< /Dest [ 15 0 R
+ /XYZ
+ 62.69291
+ 310.8189
+ 0 ]
+ /Parent 24 0 R
+ /Prev 25 0 R
+ /Title (En python) >>
+endobj
+% 'R27': class PDFPages 
+27 0 obj
+% page tree
+<< /Count 6
+ /Kids [ 6 0 R
+ 8 0 R
+ 9 0 R
+ 12 0 R
+ 15 0 R
+ 16 0 R ]
+ /Type /Pages >>
+endobj
+% 'R28': class PDFStream 
+28 0 obj
+% page stream
+<< /Length 2025 >>
+stream
+1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 262.8189 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 33.64 Tm /F2 20 Tf 24 TL 35.46197 0 Td (Monitoreo y Control Industrial) Tj T* 69.45 0 Td (Usando Python) Tj T* -104.912 0 Td ET
+Q
+Q
+q
+1 0 0 1 62.69291 237.8189 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F2 10 Tf 12 TL 43.04937 0 Td (Autor:) Tj T* -43.04937 0 Td ET
+Q
+Q
+q
+1 0 0 1 91.03937 3 cm
+q
+BT 1 0 0 1 0 4.82 Tm 12 TL /F1 10 Tf 0 0 0 rg (Joaqu\355n Sorianello <) Tj 0 0 .501961 rg (soriasoft@gmail.com) Tj 0 0 0 rg (>) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 222.8189 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F2 10 Tf 12 TL 36.92937 0 Td (Twitter:) Tj T* -36.92937 0 Td ET
+Q
+Q
+q
+1 0 0 1 91.03937 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (@_joac) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 207.8189 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F2 10 Tf 12 TL 48.59937 0 Td (blog:) Tj T* -48.59937 0 Td ET
+Q
+Q
+q
+1 0 0 1 91.03937 3 cm
+q
+0 0 .501961 rg
+0 0 .501961 RG
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (http://www.joaclandia.com.ar) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 192.8189 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F2 10 Tf 12 TL 30.24937 0 Td (Alergias:) Tj T* -30.24937 0 Td ET
+Q
+Q
+q
+1 0 0 1 91.03937 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (A los Esparragos) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 177.8189 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F2 10 Tf 12 TL 40.80937 0 Td (Fecha:) Tj T* -40.80937 0 Td ET
+Q
+Q
+q
+1 0 0 1 91.03937 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (15/10/2010) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 177.8189 cm
+Q
+q
+1 0 0 1 56.69291 0 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 181.472 0 Td (1) Tj T* -181.472 0 Td ET
+Q
+Q
+ 
+endstream
+
+endobj
+% 'R29': class PDFStream 
+29 0 obj
+% page stream
+<< /Length 3067 >>
+stream
+1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 289.8189 cm
+q
+BT 1 0 0 1 0 8.435 Tm 21 TL /F2 17.5 Tf 0 0 0 rg (PySerial) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 277.8189 cm
+Q
+q
+1 0 0 1 62.69291 262.8189 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F2 10 Tf 12 TL 56.92937 0 Td (url:) Tj T* -56.92937 0 Td ET
+Q
+Q
+q
+1 0 0 1 91.03937 3 cm
+q
+0 0 .501961 rg
+0 0 .501961 RG
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (http://pyserial.sourceforge.net/) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 232.8189 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 16.82 Tm /F1 10 Tf 12 TL 3.138394 Tw (Nos permite adquirir datos y controlar dispositivos utilizando un bus Serie) Tj T* 0 Tw (RS-232 o RS-485 \(entre otros\)) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 202.8189 cm
+q
+BT 1 0 0 1 0 7.23 Tm 18 TL /F2 15 Tf 0 0 0 rg (Dispositivos) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 190.8189 cm
+Q
+q
+1 0 0 1 62.69291 190.8189 cm
+Q
+q
+1 0 0 1 62.69291 172.8189 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (Phimetros) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 172.8189 cm
+Q
+q
+1 0 0 1 62.69291 172.8189 cm
+Q
+q
+1 0 0 1 62.69291 154.8189 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (Balanzas) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 154.8189 cm
+Q
+q
+1 0 0 1 62.69291 154.8189 cm
+Q
+q
+1 0 0 1 62.69291 136.8189 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (Conductivimetros) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 136.8189 cm
+Q
+q
+1 0 0 1 62.69291 136.8189 cm
+Q
+q
+1 0 0 1 62.69291 118.8189 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (Sensores ultras\363nicos) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 118.8189 cm
+Q
+q
+1 0 0 1 62.69291 118.8189 cm
+Q
+q
+1 0 0 1 62.69291 100.8189 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (Caudalimetros) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 100.8189 cm
+Q
+q
+1 0 0 1 62.69291 100.8189 cm
+Q
+q
+1 0 0 1 62.69291 100.8189 cm
+Q
+q
+1 0 0 1 56.69291 322.4882 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 165.637 0 Td (PySerial) Tj T* -165.637 0 Td ET
+Q
+Q
+q
+1 0 0 1 56.69291 0 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 181.472 0 Td (2) Tj T* -181.472 0 Td ET
+Q
+Q
+ 
+endstream
+
+endobj
+% 'R30': class PDFStream 
+30 0 obj
+% page stream
+<< /Length 3675 >>
+stream
+1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 292.8189 cm
+q
+BT 1 0 0 1 0 7.23 Tm 18 TL /F2 15 Tf 0 0 0 rg (Ventajas) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 280.8189 cm
+Q
+q
+1 0 0 1 62.69291 280.8189 cm
+Q
+q
+1 0 0 1 62.69291 262.8189 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (Muchos dispositivos sencillos cuentan con terminales serie.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 262.8189 cm
+Q
+q
+1 0 0 1 62.69291 262.8189 cm
+Q
+q
+1 0 0 1 62.69291 244.8189 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (No importa el tipo de Bus.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 244.8189 cm
+Q
+q
+1 0 0 1 62.69291 244.8189 cm
+Q
+q
+1 0 0 1 62.69291 214.8189 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 15 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 16.82 Tm /F1 10 Tf 12 TL 3.672394 Tw (Es sencillo realizar mockups de dispositivos serie, para la etapa de) Tj T* 0 Tw (desarrollo y testing.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 214.8189 cm
+Q
+q
+1 0 0 1 62.69291 214.8189 cm
+Q
+q
+1 0 0 1 62.69291 184.8189 cm
+q
+BT 1 0 0 1 0 7.23 Tm 18 TL /F2 15 Tf 0 0 0 rg (Desventajas) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 172.8189 cm
+Q
+q
+1 0 0 1 62.69291 172.8189 cm
+Q
+q
+1 0 0 1 62.69291 142.8189 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 15 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 16.82 Tm /F1 10 Tf 12 TL 7.296742 Tw (Algunos protocolos y formatos de comunicaci\363n no est\341n bien) Tj T* 0 Tw (documentados.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 142.8189 cm
+Q
+q
+1 0 0 1 62.69291 142.8189 cm
+Q
+q
+1 0 0 1 62.69291 124.8189 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (El acceso a par\341metros suele ser limitado) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 124.8189 cm
+Q
+q
+1 0 0 1 62.69291 124.8189 cm
+Q
+q
+1 0 0 1 62.69291 106.8189 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL (Generalmente no es posible tener mas de un dispositivo en el mismo bus.) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 106.8189 cm
+Q
+q
+1 0 0 1 62.69291 106.8189 cm
+Q
+q
+1 0 0 1 62.69291 76.8189 cm
+0 0 0 rg
+BT /F1 10 Tf 12 TL ET
+q
+1 0 0 1 6 15 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 10.5 0 Td (\177) Tj T* -10.5 0 Td ET
+Q
+Q
+q
+1 0 0 1 23 3 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 16.82 Tm /F1 10 Tf 12 TL .114394 Tw (Tenemos que implementar nuestro propio control de errores para los datos) Tj T* 0 Tw (que llegan) Tj T* ET
+Q
+Q
+q
+Q
+Q
+q
+1 0 0 1 62.69291 76.8189 cm
+Q
+q
+1 0 0 1 62.69291 76.8189 cm
+Q
+q
+1 0 0 1 62.69291 76.8189 cm
+Q
+q
+1 0 0 1 56.69291 322.4882 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 164.797 0 Td (Ventajas) Tj T* -164.797 0 Td ET
+Q
+Q
+q
+1 0 0 1 56.69291 0 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 181.472 0 Td (3) Tj T* -181.472 0 Td ET
+Q
+Q
+ 
+endstream
+
+endobj
+% 'R31': class PDFStream 
+31 0 obj
+% page stream
+<< /Length 1788 >>
+stream
+1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 292.8189 cm
+q
+BT 1 0 0 1 0 7.23 Tm 18 TL /F2 15 Tf 0 0 0 rg (Lectura de Peso de una balanza NC3M) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 262.8189 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 16.82 Tm /F1 10 Tf 12 TL 2.741549 Tw (Esta balanza de la empresa argentina industrias tecnol\363gicas establece un) Tj T* 0 Tw (formato propio para leer su salida de datos por puerto serie.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 235.8189 cm
+q
+BT 1 0 0 1 0 6.025 Tm 15 TL /F3 12.5 Tf 0 0 0 rg (Formato del Dato) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 86.84839 cm
+q
+q
+.970871 0 0 .970871 0 0 cm
+q
+1 0 0 1 6.6 6.798017 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 366 144 re B*
+Q
+q
+BT 1 0 0 1 0 125.71 Tm 12 TL /F4 10 Tf 0 0 0 rg (<) Tj (STX) Tj (>) Tj (<) Tj (SIGNO) Tj (>) Tj (<) Tj (NETO) Tj (>) Tj (<) Tj (STATUS) Tj (>) Tj (<) Tj (TARA) Tj (>) Tj (<) Tj (CR/LF) Tj (>) Tj  T*  T* (<) Tj (STX) Tj (>) Tj ( = 0x32 \(decimal\)\(un byte\)) Tj T* (<) Tj (SIGNO) Tj (>) Tj ( = 0x20 \(' '\) \(peso Positivo\) o 0x2D \(Peso negativo\)) Tj T* (<) Tj (NETO) Tj (>) Tj ( = 6 caracteres mas el punto decimal, \(7 Bytes\)) Tj T* (<) Tj (STATUS) Tj (>) Tj ( =) Tj T* (    'O'\(0x4f\) = Sobrecarga) Tj T* (    'M'\(0x4d\) = Movimiento) Tj T* (    ' '\(0x20\) = Pesada Valida) Tj T* (<) Tj (TARA) Tj (>) Tj ( = mismo formato que neto) Tj T* (<) Tj (CR/LF) Tj (>) Tj ( Retorno de Carro y salto de Linea 0x0D 0x0A) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 56.69291 322.4882 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 96.70697 0 Td (Lectura de Peso de una balanza NC3M) Tj T* -96.70697 0 Td ET
+Q
+Q
+q
+1 0 0 1 56.69291 0 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 181.472 0 Td (4) Tj T* -181.472 0 Td ET
+Q
+Q
+ 
+endstream
+
+endobj
+% 'R32': class PDFStream 
+32 0 obj
+% page stream
+<< /Length 3518 >>
+stream
+1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 295.8189 cm
+q
+BT 1 0 0 1 0 6.025 Tm 15 TL /F3 12.5 Tf 0 0 0 rg (En python) Tj T* ET
+Q
+Q
+q
+1 0 0 1 62.69291 63.35346 cm
+q
+q
+.846401 0 0 .846401 0 0 cm
+q
+1 0 0 1 6.6 7.797726 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 420 264 re B*
+Q
+q
+BT 1 0 0 1 0 245.71 Tm 12 TL /F5 10 Tf .25098 .501961 .501961 rg (#!-*- coding: utf8 -*-) Tj /F4 10 Tf 0 0 0 rg  T* /F5 10 Tf .729412 .129412 .129412 rg ("""Cliente serie para la balanza nc3m""") Tj /F4 10 Tf 0 0 0 rg  T*  T* /F6 10 Tf 0 .501961 0 rg (import) Tj /F4 10 Tf 0 0 0 rg ( ) Tj /F6 10 Tf 0 0 1 rg (struct) Tj /F4 10 Tf 0 0 0 rg  T* /F6 10 Tf 0 .501961 0 rg (import) Tj /F4 10 Tf 0 0 0 rg ( ) Tj /F6 10 Tf 0 0 1 rg (serial) Tj /F4 10 Tf 0 0 0 rg  T* /F6 10 Tf 0 .501961 0 rg (import) Tj /F4 10 Tf 0 0 0 rg ( ) Tj /F6 10 Tf 0 0 1 rg (decimal) Tj /F4 10 Tf 0 0 0 rg  T*  T* /F6 10 Tf 0 .501961 0 rg (def) Tj /F4 10 Tf 0 0 0 rg ( ) Tj 0 0 1 rg (decimal_from_nc3m) Tj 0 0 0 rg (\() Tj (nc3m_num) Tj (\):) Tj  T* (    ) Tj /F5 10 Tf .729412 .129412 .129412 rg ("""Toma un numero en el formato NC3M y lo convierte a decimal""") Tj /F4 10 Tf 0 0 0 rg  T* (    ) Tj (nc3m_num) Tj ( ) Tj .4 .4 .4 rg (=) Tj 0 0 0 rg ( ) Tj (nc3m_num) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (replace) Tj (\() Tj .729412 .129412 .129412 rg (',') Tj 0 0 0 rg (,) Tj ( ) Tj .729412 .129412 .129412 rg ('.') Tj 0 0 0 rg (\)) Tj  T* (    ) Tj /F6 10 Tf 0 .501961 0 rg (return) Tj /F4 10 Tf 0 0 0 rg ( ) Tj (decimal) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (Decimal) Tj (\() Tj (nc3m_num) Tj (\)) Tj  T*  T* /F6 10 Tf 0 .501961 0 rg (def) Tj /F4 10 Tf 0 0 0 rg ( ) Tj 0 0 1 rg (main) Tj 0 0 0 rg (\(\):) Tj  T* (    ) Tj /F5 10 Tf .25098 .501961 .501961 rg (#definimos el string de formato) Tj /F4 10 Tf 0 0 0 rg  T* (    ) Tj (fcn) Tj ( ) Tj .4 .4 .4 rg (=) Tj 0 0 0 rg ( ) Tj .729412 .129412 .129412 rg ('c8sc7s2c') Tj 0 0 0 rg  T* (    ) Tj /F5 10 Tf .25098 .501961 .501961 rg (#creamos una conexi\363n serie) Tj /F4 10 Tf 0 0 0 rg  T* (    ) Tj (ser) Tj ( ) Tj .4 .4 .4 rg (=) Tj 0 0 0 rg ( ) Tj (serial) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (Serial) Tj (\() Tj .729412 .129412 .129412 rg ('vserial2') Tj 0 0 0 rg (\)) Tj  T* (    ) Tj (totalizador) Tj ( ) Tj .4 .4 .4 rg (=) Tj 0 0 0 rg ( ) Tj .4 .4 .4 rg (0) Tj 0 0 0 rg  T* (    ) Tj /F5 10 Tf .25098 .501961 .501961 rg (#Adquirimos los datos) Tj /F4 10 Tf 0 0 0 rg  T* (    ) Tj /F6 10 Tf 0 .501961 0 rg (while) Tj /F4 10 Tf 0 0 0 rg ( ) Tj 0 .501961 0 rg (True) Tj 0 0 0 rg (:) Tj  T* (        ) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 62.69291 18.15346 cm
+q
+q
+1 0 0 1 0 0 cm
+q
+1 0 0 1 6.6 6.6 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 355.3039 36 re B*
+Q
+q
+BT 1 0 0 1 0 17.71 Tm 12 TL /F4 10 Tf 0 0 0 rg (        ) Tj (a) Tj ( ) Tj .4 .4 .4 rg (=) Tj 0 0 0 rg ( ) Tj (ser) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (readline) Tj (\(\)) Tj ( ) Tj /F5 10 Tf .25098 .501961 .501961 rg (#Leemos una linea del buffer) Tj /F4 10 Tf 0 0 0 rg  T* (        ) Tj /F6 10 Tf 0 .501961 0 rg (if) Tj /F4 10 Tf 0 0 0 rg ( ) Tj 0 .501961 0 rg (len) Tj 0 0 0 rg (\() Tj (a) Tj (\)) Tj ( ) Tj .4 .4 .4 rg (==) Tj 0 0 0 rg ( ) Tj .4 .4 .4 rg (19) Tj 0 0 0 rg (:) Tj  T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 56.69291 322.4882 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 161.737 0 Td (En python) Tj T* -161.737 0 Td ET
+Q
+Q
+q
+1 0 0 1 56.69291 0 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 181.472 0 Td (5) Tj T* -181.472 0 Td ET
+Q
+Q
+ 
+endstream
+
+endobj
+% 'R33': class PDFStream 
+33 0 obj
+% page stream
+<< /Length 2194 >>
+stream
+1 0 0 1 0 0 cm BT /F1 12 Tf 14.4 TL ET
+q
+1 0 0 1 62.69291 222.132 cm
+q
+q
+.73174 0 0 .73174 0 0 cm
+q
+1 0 0 1 6.6 9.019592 cm
+q
+.662745 .662745 .662745 RG
+.5 w
+.960784 .960784 .862745 rg
+n -6 -6 486 120 re B*
+Q
+q
+BT 1 0 0 1 0 101.71 Tm 12 TL /F4 10 Tf 0 0 0 rg (            ) Tj (stx) Tj (,) Tj ( ) Tj (neto) Tj (,) Tj ( ) Tj (status) Tj (,) Tj ( ) Tj (tara) Tj (,) Tj ( ) Tj (cr) Tj (,) Tj ( ) Tj (lf) Tj ( ) Tj .4 .4 .4 rg (=) Tj 0 0 0 rg ( ) Tj (struct) Tj .4 .4 .4 rg (.) Tj 0 0 0 rg (unpack) Tj (\() Tj (fcn) Tj (,) Tj ( ) Tj (a) Tj (\)) Tj  T* (            ) Tj /F6 10 Tf 0 .501961 0 rg (if) Tj /F4 10 Tf 0 0 0 rg ( ) Tj (status) Tj ( ) Tj .4 .4 .4 rg (==) Tj 0 0 0 rg ( ) Tj .729412 .129412 .129412 rg (' ') Tj 0 0 0 rg (:) Tj (  ) Tj /F5 10 Tf .25098 .501961 .501961 rg (#Chequeamos que la balanza est\351 en equilibrio) Tj /F4 10 Tf 0 0 0 rg  T* (                ) Tj (neto) Tj ( ) Tj .4 .4 .4 rg (=) Tj 0 0 0 rg ( ) Tj (decimal_from_nc3m) Tj (\() Tj (neto) Tj (\)) Tj  T* (                ) Tj (totalizador) Tj ( ) Tj .4 .4 .4 rg (+=) Tj 0 0 0 rg ( ) Tj (neto) Tj  T* (                ) Tj /F6 10 Tf 0 .501961 0 rg (print) Tj /F4 10 Tf 0 0 0 rg ( ) Tj .729412 .129412 .129412 rg ("Peso Neto: ) Tj /F6 10 Tf .733333 .4 .533333 rg (%s) Tj /F4 10 Tf .729412 .129412 .129412 rg ( Peso Acumulado: ) Tj /F6 10 Tf .733333 .4 .533333 rg (%s) Tj /F4 10 Tf .729412 .129412 .129412 rg (") Tj 0 0 0 rg ( ) Tj .4 .4 .4 rg (%) Tj 0 0 0 rg ( ) Tj (\() Tj ( ) Tj (neto) Tj (,) Tj ( ) Tj (totalizador) Tj (\)) Tj  T* (                ) Tj T* /F6 10 Tf 0 .501961 0 rg (if) Tj /F4 10 Tf 0 0 0 rg ( ) Tj (__name__) Tj ( ) Tj .4 .4 .4 rg (==) Tj 0 0 0 rg ( ) Tj .729412 .129412 .129412 rg ("__main__") Tj 0 0 0 rg (:) Tj  T* (    ) Tj /F6 10 Tf 0 .501961 0 rg (print) Tj /F4 10 Tf 0 0 0 rg ( ) Tj .729412 .129412 .129412 rg ("Cliente serie para balanza NC3M") Tj 0 0 0 rg  T* (    ) Tj (main) Tj (\(\)) Tj T* ET
+Q
+Q
+Q
+Q
+Q
+q
+1 0 0 1 56.69291 322.4882 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 161.737 0 Td (En python) Tj T* -161.737 0 Td ET
+Q
+Q
+q
+1 0 0 1 56.69291 0 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 4.82 Tm /F1 10 Tf 12 TL 181.472 0 Td (6) Tj T* -181.472 0 Td ET
+Q
+Q
+ 
+endstream
+
+endobj
+% 'R34': class PDFPageLabels 
+34 0 obj
+% Document Root
+<< /Nums [ 0
+ 35 0 R
+ 1
+ 36 0 R
+ 2
+ 37 0 R
+ 3
+ 38 0 R
+ 4
+ 39 0 R
+ 5
+ 40 0 R ] >>
+endobj
+% 'R35': class PDFPageLabel 
+35 0 obj
+% None
+<< /S /D
+ /St 1 >>
+endobj
+% 'R36': class PDFPageLabel 
+36 0 obj
+% None
+<< /S /D
+ /St 2 >>
+endobj
+% 'R37': class PDFPageLabel 
+37 0 obj
+% None
+<< /S /D
+ /St 3 >>
+endobj
+% 'R38': class PDFPageLabel 
+38 0 obj
+% None
+<< /S /D
+ /St 4 >>
+endobj
+% 'R39': class PDFPageLabel 
+39 0 obj
+% None
+<< /S /D
+ /St 5 >>
+endobj
+% 'R40': class PDFPageLabel 
+40 0 obj
+% None
+<< /S /D
+ /St 6 >>
+endobj
+xref
+0 41
+0000000000 65535 f
+0000000113 00000 n
+0000000273 00000 n
+0000000438 00000 n
+0000000625 00000 n
+0000000869 00000 n
+0000001101 00000 n
+0000001422 00000 n
+0000001658 00000 n
+0000001957 00000 n
+0000002238 00000 n
+0000002428 00000 n
+0000002588 00000 n
+0000002870 00000 n
+0000003048 00000 n
+0000003218 00000 n
+0000003498 00000 n
+0000003779 00000 n
+0000003938 00000 n
+0000004194 00000 n
+0000004319 00000 n
+0000004516 00000 n
+0000004690 00000 n
+0000004875 00000 n
+0000005063 00000 n
+0000005303 00000 n
+0000005482 00000 n
+0000005636 00000 n
+0000005786 00000 n
+0000007912 00000 n
+0000011080 00000 n
+0000014856 00000 n
+0000016745 00000 n
+0000020364 00000 n
+0000022663 00000 n
+0000022821 00000 n
+0000022898 00000 n
+0000022975 00000 n
+0000023052 00000 n
+0000023129 00000 n
+0000023206 00000 n
+trailer
+<< /ID 
+ % ReportLab generated PDF document -- digest (http://www.reportlab.com) 
+ [(PR\245\355Ri\210\251^\224+t\027\012\000.) (PR\245\355Ri\210\251^\224+t\027\012\000.)] 
+
+ /Info 18 0 R
+ /Root 17 0 R
+ /Size 41 >>
+startxref
+23253
+%%EOF
