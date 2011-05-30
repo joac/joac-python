@@ -1,0 +1,4 @@
+  File "rollercoaster.py", line 13
+    for n in xrange(0, cycles % len( memo_dict ) )
+                                                 ^
+SyntaxError: invalid syntax
